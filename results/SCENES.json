@@ -1,0 +1,32 @@
+[
+ {
+  "scene": "twins",
+  "Sihti": 1.0,
+  "k-means Lab+xy": 0.349,
+  "Felzenszwalb": 0.957
+ },
+ {
+  "scene": "shade",
+  "Sihti": 1.0,
+  "k-means Lab+xy": 0.328,
+  "Felzenszwalb": 0.999
+ },
+ {
+  "scene": "overlap",
+  "Sihti": 1.0,
+  "k-means Lab+xy": 1.0,
+  "Felzenszwalb": 0.898
+ },
+ {
+  "scene": "stripes",
+  "Sihti": 0.773,
+  "k-means Lab+xy": 0.446,
+  "Felzenszwalb": 0.812
+ },
+ {
+  "scene": "leaves",
+  "Sihti": 0.753,
+  "k-means Lab+xy": 0.749,
+  "Felzenszwalb": 0.806
+ }
+]

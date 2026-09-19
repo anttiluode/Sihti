@@ -1,0 +1,8 @@
+numpy>=1.24
+scipy>=1.10
+pillow>=9.1
+# optional
+opencv-python      # webcam in sihti_live.py
+scikit-image       # Felzenszwalb attacker in bench_bsds.py
+matplotlib         # figures/bench.png in make_figures.py
+pytest             # tests/

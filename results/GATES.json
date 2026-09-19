@@ -1,0 +1,962 @@
+{
+ "g0": {
+  "gate": "G0 lossless",
+  "tolerance": 1e-12,
+  "worst": 1.1102230246251565e-16,
+  "pass": true,
+  "cases": 154,
+  "rows": [
+   {
+    "image": "twins",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "twins",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "twins",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "twins",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "shade",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "shade",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "shade",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "shade",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "shade",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "shade",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "shade",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "shade",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "shade",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "shade",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "shade",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "overlap",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "overlap",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "overlap",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "overlap",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 5.551115123125783e-17
+   },
+   {
+    "image": "overlap",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "overlap",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "overlap",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "overlap",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "overlap",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "overlap",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "overlap",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "stripes",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "stripes",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "stripes",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "stripes",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 3.469446951953614e-17
+   },
+   {
+    "image": "stripes",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "stripes",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "stripes",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "stripes",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "stripes",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "stripes",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "stripes",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 8.874685183736383e-31
+   },
+   {
+    "image": "leaves",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "leaves",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "leaves",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "leaves",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "leaves",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "leaves",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "leaves",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "leaves",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "leaves",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "leaves",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "leaves",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "noise",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "noise",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "noise",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "noise",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "noise",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "noise",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "noise",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 6.938893903907228e-18
+   },
+   {
+    "image": "noise",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "noise",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "noise",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "noise",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 5.551115123125783e-17
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 1.0408340855860843e-17
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 3.469446951953614e-18
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 3.469446951953614e-18
+   },
+   {
+    "image": "101085.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 1.3877787807814457e-17
+   },
+   {
+    "image": "101087.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 2.7755575615628914e-17
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "102061.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "103070.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "105025.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "106024.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 5.551115123125783e-17
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108005.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "self",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "lattice",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "rebuilt (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "median (nonlinear)",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "noisy self",
+    "J": 6,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "alternating sigh EQs",
+    "J": 7,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "sigh low pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "sigh high pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "sigh band pass",
+    "J": 9,
+    "max_abs_error": 1.1102230246251565e-16
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "sigh notch",
+    "J": 9,
+    "max_abs_error": 0.0
+   },
+   {
+    "image": "108070.jpg",
+    "purifier": "sigh all pass",
+    "J": 9,
+    "max_abs_error": 0.0
+   }
+  ]
+ },
+ "g1": {
+  "gate": "G1 no new axis for a fixed Fourier EQ",
+  "tolerance": 1e-09,
+  "worst": 5.570544026056723e-14,
+  "cases": 63,
+  "pass": true,
+  "sigh_64x64": {
+   "frequency_bins": 4096,
+   "distinct_k2": 457,
+   "distinct_gains_reachable": 159
+  }
+ },
+ "g2": {
+  "gate": "G2 substrate",
+  "pass": true,
+  "blank_self_equals_lattice": true,
+  "lattice_modes_1_2_in_cosine_span": [
+   0.9999916545002583,
+   0.9999760365961946
+  ],
+  "checkerboard": {
+   "non_lazy_one_step_error_vs_minus_c": 0.0,
+   "non_lazy_mean_abs_after_100_passes": 1.0,
+   "lazy_one_step_max_abs": 0.0
+  }
+ },
+ "seconds": 33.1
+}
