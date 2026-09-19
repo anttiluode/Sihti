@@ -158,10 +158,17 @@ both fail: raw cheap refinement beats Sihti core on the declared layout/edge
 metrics, and direct 512×512 SDXL-Turbo is faster than the draft→sieve→refine
 route.
 
-That negative result is kept. The next gate is not more tuning of the same
-hypothesis. [AI_GATE1.md](AI_GATE1.md) tests whether residue energy can instead
-predict **where** extra diffusion work is needed, which is the bridge to
-WhatToLookAt-style local compute allocation.
+That negative result is kept. [AI_GATE1.md](AI_GATE1.md) then tested whether
+residue energy predicts **where** extra diffusion work is needed. That
+Sihti-specific claim also fails: Sihti residue captures 38.54% of teacher
+correction energy in the top 25% of tiles, while simple draft edge energy
+captures 45.72% and has higher rank correlation (0.681 vs 0.587).
+
+So the SDXL branch now has a clean boundary: Sihti remains useful as a
+decomposition/editing instrument, but these tests do not support calling it a
+diffusion accelerator or compute router. The surviving compute-routing idea is
+being handed to WhatToLookAt with the cheapest winning observable rather than
+forcing the Sihti residue to win.
 
 ## Next: v1, common fate (not built)
 
