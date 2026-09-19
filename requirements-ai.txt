@@ -1,0 +1,10 @@
+# Optional heavy GPU dependencies for Sihti AI experiments.
+# Install torch for your CUDA version first if needed:
+# https://pytorch.org/get-started/locally/
+torch>=2.1
+diffusers>=0.31
+transformers>=4.40
+accelerate>=0.30
+safetensors>=0.4
+numpy>=1.24
+pillow>=9.1
