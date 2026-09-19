@@ -1,6 +1,6 @@
 # Sihti
 
-*Sihti* is Finnish for a fine sieve.
+Sihti (Finnish for a fine sieve) runs the SighImageSuper loop but keeps what dies. Between depths 0, 1, 2, 4, … it saves whatever bled out; add the residues back to the surviving core and you get the input exactly. The same sieve takes any purifier, and the purifier decides what "persistence" means — frequency for Sigh's EQ, object grouping for the image's own colour graph, where the layout stays in the core and the insides bleed into the residues.
 
 ![left: a photo purified on its own graph; right: the same photo under Sigh's high-pass EQ, ending on the checkerboard](figures/loop.gif)
 
