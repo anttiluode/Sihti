@@ -1,6 +1,6 @@
 # Sihti AI-G0 — causal sieve + SDXL-Turbo compute gate
 
-Status: **manual GPU gate, ready to run; no result claimed yet.**
+Status: **run on RTX 3060 across 3 prompts × 3 seeds; representation claim FAIL, speed claim FAIL, causal identity PASS.**
 
 The first SDXL prototype had a hidden identity: the purifier produced
 
@@ -101,3 +101,56 @@ Likely branches:
   instead of conditioning the whole frame on the core.
 - If none beats raw: keep the live instrument as a decomposition/editing tool
   and do not claim acceleration.
+
+
+## Result
+
+Run: 9 cases on **NVIDIA GeForce RTX 3060**, 4-step raw-draft teacher,
+2-step cheap refinements, strength 0.6.
+
+The telescoping identity passed cleanly:
+
+```text
+max |core + residue - draft| = 9.31e-10
+```
+
+Aggregate cheap-refinement quality versus the 4-step teacher:
+
+| conditioning | PSNR | 64×64 layout PSNR | edge correlation | end-to-end |
+|---|---:|---:|---:|---:|
+| **raw draft** | **28.554 dB** | **30.074 dB** | **0.6650** | **0.894 s** |
+| half residue | 28.502 dB | 29.937 dB | 0.6526 | 0.906 s |
+| Sihti core | 27.914 dB | 29.231 dB | 0.6290 | 0.908 s |
+| matched Gaussian | 28.032 dB | 29.388 dB | 0.6344 | 0.906 s |
+
+Paired Sihti-core minus raw:
+
+```text
+layout PSNR mean   -0.843 dB   (core better in 3/9 cases)
+edge correlation  -0.0360     (core better in 2/9 cases)
+```
+
+Paired Sihti-core minus matched Gaussian:
+
+```text
+layout PSNR mean   -0.157 dB   (core better in 3/9)
+edge correlation  -0.0054     (core better in 2/9)
+```
+
+The speed claim also fails:
+
+```text
+direct 512×512 text-to-image          0.577 s mean
+raw draft → cheap refinement route    0.894 s mean
+Sihti core → cheap refinement route   0.908 s mean
+```
+
+So AI-G0 kills the first acceleration story:
+
+> **globally refining the Sihti core is neither a better representation nor a
+> faster route than the raw draft in this SDXL-Turbo setup.**
+
+This negative result decides the next gate. We do **not** tune the core until it
+wins. AI-G1 instead asks whether the residue has local predictive value:
+does it identify the spatial tiles where the cheap refinement differs most from
+the expensive teacher? See [AI_GATE1.md](AI_GATE1.md).

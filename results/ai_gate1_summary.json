@@ -1,0 +1,56 @@
+{
+  "source_gate": "AI-G0",
+  "grid": 8,
+  "tiles_per_case": 64,
+  "top_fraction": 0.25,
+  "sieve_steps": 8,
+  "sieve_sigma": 0.12,
+  "target": "per-tile MSE between raw cheap refinement and four-step teacher",
+  "aggregate": {
+    "sihti_residue": {
+      "cases": 9,
+      "mean_spearman": 0.5868996743996744,
+      "median_spearman": 0.6189102564102563,
+      "mean_top25_capture": 0.3853550084134174,
+      "median_top25_capture": 0.3898529885321371,
+      "mean_top25_capture_over_random": 0.1353550084134174
+    },
+    "gaussian_residue": {
+      "cases": 9,
+      "mean_spearman": 0.6190883190883191,
+      "median_spearman": 0.5982600732600732,
+      "mean_top25_capture": 0.42992121527653243,
+      "median_top25_capture": 0.42223807733175334,
+      "mean_top25_capture_over_random": 0.17992121527653243
+    },
+    "edge_energy": {
+      "cases": 9,
+      "mean_spearman": 0.6805148555148555,
+      "median_spearman": 0.6961996336996336,
+      "mean_top25_capture": 0.4572087627006041,
+      "median_top25_capture": 0.44428916199887675,
+      "mean_top25_capture_over_random": 0.20720876270060412
+    },
+    "local_variance": {
+      "cases": 9,
+      "mean_spearman": 0.5978428978428977,
+      "median_spearman": 0.681043956043956,
+      "mean_top25_capture": 0.44703060345253753,
+      "median_top25_capture": 0.43547837450682253,
+      "mean_top25_capture_over_random": 0.19703060345253753
+    },
+    "claim_receipt": {
+      "sihti_minus_best_baseline_mean_spearman": -0.09361518111518108,
+      "sihti_minus_best_baseline_mean_top25_capture": -0.07185375428718671,
+      "sihti_top25_case_wins_vs_best_baseline": 0,
+      "required_margin": 0.05,
+      "required_case_wins": 6,
+      "router_claim_pass": false
+    }
+  },
+  "provenance": {
+    "workflow_run_id": 35424683158,
+    "workflow_artifact_id": 10578598135,
+    "note": "Full per-case JSON was produced by GitHub Actions from the committed AI-G0 images; this committed receipt keeps the aggregate and claim decision."
+  }
+}

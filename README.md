@@ -152,9 +152,23 @@ A heavier receipt:
 python ai_gate0_sdxl_turbo.py --local-only --seeds 100 101 102
 ```
 
-No acceleration is claimed until that output exists. A route only wins if it
-preserves a declared quality frontier **and** is faster after draft + sieve +
-refinement overhead is counted.
+AI-G0 has now been run on an RTX 3060 across 3 prompts × 3 seeds. The
+causal identity passes, but the global-core representation and speed claims
+both fail: raw cheap refinement beats Sihti core on the declared layout/edge
+metrics, and direct 512×512 SDXL-Turbo is faster than the draft→sieve→refine
+route.
+
+That negative result is kept. [AI_GATE1.md](AI_GATE1.md) then tested whether
+residue energy predicts **where** extra diffusion work is needed. That
+Sihti-specific claim also fails: Sihti residue captures 38.54% of teacher
+correction energy in the top 25% of tiles, while simple draft edge energy
+captures 45.72% and has higher rank correlation (0.681 vs 0.587).
+
+So the SDXL branch now has a clean boundary: Sihti remains useful as a
+decomposition/editing instrument, but these tests do not support calling it a
+diffusion accelerator or compute router. The surviving compute-routing idea is
+being handed to WhatToLookAt with the cheapest winning observable rather than
+forcing the Sihti residue to win.
 
 ## Next: v1, common fate (not built)
 
