@@ -152,9 +152,16 @@ A heavier receipt:
 python ai_gate0_sdxl_turbo.py --local-only --seeds 100 101 102
 ```
 
-No acceleration is claimed until that output exists. A route only wins if it
-preserves a declared quality frontier **and** is faster after draft + sieve +
-refinement overhead is counted.
+AI-G0 has now been run on an RTX 3060 across 3 prompts × 3 seeds. The
+causal identity passes, but the global-core representation and speed claims
+both fail: raw cheap refinement beats Sihti core on the declared layout/edge
+metrics, and direct 512×512 SDXL-Turbo is faster than the draft→sieve→refine
+route.
+
+That negative result is kept. The next gate is not more tuning of the same
+hypothesis. [AI_GATE1.md](AI_GATE1.md) tests whether residue energy can instead
+predict **where** extra diffusion work is needed, which is the bridge to
+WhatToLookAt-style local compute allocation.
 
 ## Next: v1, common fate (not built)
 
