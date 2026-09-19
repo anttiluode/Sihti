@@ -1,6 +1,6 @@
 # Sihti AI-G1 — does residue say where more diffusion work is needed?
 
-Status: **pre-registered CPU gate; AI-G0 images are already in the repo.**
+Status: **run in GitHub Actions on all 9 AI-G0 cases; Sihti router-signal claim FAIL.**
 
 ## Why this gate exists
 
@@ -87,3 +87,44 @@ Output:
 ```text
 results/ai_gate1_summary.json
 ```
+
+
+## Result
+
+The gate ran from the committed AI-G0 images in GitHub Actions.
+
+| predictor | mean Spearman | mean top-25% correction capture |
+|---|---:|---:|
+| Sihti residue | 0.5869 | 38.54% |
+| matched Gaussian residual | 0.6191 | 42.99% |
+| **draft edge energy** | **0.6805** | **45.72%** |
+| local variance | 0.5978 | 44.70% |
+
+Randomly choosing 25% of tiles would capture 25% of correction energy in
+expectation. So the *general* routing idea has signal, but Sihti residue is not
+the best signal.
+
+Against the best simple baseline:
+
+```text
+Sihti mean Spearman margin       -0.0936
+Sihti mean top-25% capture       -0.0719
+Sihti top-25% case wins           0 / 9
+required                           +0.05, +0.05, >=6/9
+```
+
+Therefore:
+
+> **AI-G1 FAILS the Sihti-specific router claim.**
+
+This is a useful negative result. Two separate AI gates now reject the tempting
+story that Sihti itself makes SDXL-Turbo cheaper:
+
+1. the purified core is not a better global cheap conditioning image;
+2. the residue is not a better local compute-allocation signal than trivial
+   image observables.
+
+But a cross-repo result survives: edge energy concentrates **45.72%** of the
+teacher-correction energy into only **25%** of the tiles. The next compute-routing
+experiment therefore belongs more naturally in **WhatToLookAt**, using the
+cheapest winning observable rather than forcing Sihti to win.
