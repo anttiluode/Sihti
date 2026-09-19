@@ -43,6 +43,8 @@ from scipy.stats import spearmanr
 
 GRID = 8
 TOP_FRACTION = 0.25
+SIEVE_STEPS = 8
+SIEVE_SIGMA = 0.12
 PREDICTORS = ("sihti_residue", "gaussian_residue", "edge_energy", "local_variance")
 
 
@@ -65,14 +67,54 @@ def correction_target(raw: np.ndarray, teacher: np.ndarray, grid: int = GRID) ->
     return tile_reduce(err, grid)
 
 
+def sihti_core_cpu(
+    draft: np.ndarray,
+    steps: int = SIEVE_STEPS,
+    sigma: float = SIEVE_SIGMA,
+) -> np.ndarray:
+    """CPU reproduction of the AI-G0 edge-aware GPU sieve."""
+    img = np.asarray(draft, dtype=np.float64)
+    curr = img.copy()
+    inv_2s2 = 1.0 / (2.0 * float(sigma) ** 2)
+
+    for _ in range(int(steps)):
+        pc = np.pad(curr, ((1, 1), (1, 1), (0, 0)), mode="edge")
+        po = np.pad(img, ((1, 1), (1, 1), (0, 0)), mode="edge")
+
+        uo = po[:-2, 1:-1]
+        do = po[2:, 1:-1]
+        lo = po[1:-1, :-2]
+        ro = po[1:-1, 2:]
+
+        wu = np.exp(-np.sum((img - uo) ** 2, axis=2, keepdims=True) * inv_2s2)
+        wd = np.exp(-np.sum((img - do) ** 2, axis=2, keepdims=True) * inv_2s2)
+        wl = np.exp(-np.sum((img - lo) ** 2, axis=2, keepdims=True) * inv_2s2)
+        wr = np.exp(-np.sum((img - ro) ** 2, axis=2, keepdims=True) * inv_2s2)
+
+        uv = pc[:-2, 1:-1]
+        dv = pc[2:, 1:-1]
+        lv = pc[1:-1, :-2]
+        rv = pc[1:-1, 2:]
+
+        wsum = 1.0 + 0.25 * (wu + wd + wl + wr)
+        curr = (
+            img + 0.25 * (wu * uv + wd * dv + wl * lv + wr * rv)
+        ) / wsum
+
+    return curr
+
+
 def predictor_maps(
     draft: np.ndarray,
-    core: np.ndarray,
+    core: np.ndarray | None,
     gaussian_sigma: float,
     grid: int = GRID,
 ) -> dict[str, np.ndarray]:
     draft = np.asarray(draft, dtype=np.float64)
-    core = np.asarray(core, dtype=np.float64)
+    if core is None:
+        core = sihti_core_cpu(draft)
+    else:
+        core = np.asarray(core, dtype=np.float64)
 
     sihti = np.mean((draft - core) ** 2, axis=2)
 
@@ -130,7 +172,6 @@ def case_paths(root: Path, prompt_index: int, seed: int) -> dict[str, Path]:
     stem = f"p{prompt_index:02d}_s{int(seed)}"
     return {
         "draft": root / f"{stem}_draft.png",
-        "core": root / f"{stem}_sihti_core.png",
         "raw": root / f"{stem}_raw.png",
         "teacher": root / f"{stem}_teacher.png",
     }
@@ -148,12 +189,11 @@ def evaluate_case(
         raise FileNotFoundError("missing AI-G0 image(s): " + ", ".join(missing))
 
     draft = load_rgb(paths["draft"])
-    core = load_rgb(paths["core"])
     raw = load_rgb(paths["raw"])
     teacher = load_rgb(paths["teacher"])
 
     target = correction_target(raw, teacher, grid)
-    scores = predictor_maps(draft, core, float(case["gaussian_sigma"]), grid)
+    scores = predictor_maps(draft, None, float(case["gaussian_sigma"]), grid)
 
     predictors = {}
     for name, score in scores.items():
@@ -255,6 +295,8 @@ def main() -> None:
         "grid": int(args.grid),
         "tiles_per_case": int(args.grid * args.grid),
         "top_fraction": TOP_FRACTION,
+        "sieve_steps": SIEVE_STEPS,
+        "sieve_sigma": SIEVE_SIGMA,
         "target": "per-tile MSE between raw cheap refinement and four-step teacher",
         "cases": cases,
         "aggregate": aggregate(cases),
