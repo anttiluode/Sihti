@@ -129,8 +129,10 @@ def oracle_top_capture(target: np.ndarray, fraction: float = TOP_FRACTION) -> fl
 def case_paths(root: Path, prompt_index: int, seed: int) -> dict[str, Path]:
     stem = f"p{prompt_index:02d}_s{int(seed)}"
     return {
-        name: root / f"{stem}_{name}.png"
-        for name in ("draft", "core", "raw", "teacher")
+        "draft": root / f"{stem}_draft.png",
+        "core": root / f"{stem}_sihti_core.png",
+        "raw": root / f"{stem}_raw.png",
+        "teacher": root / f"{stem}_teacher.png",
     }
 
 
