@@ -1,0 +1,490 @@
+{
+  "model": "stabilityai/sdxl-turbo",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "teacher_steps": 4,
+  "cheap_steps": 2,
+  "strength": 0.6,
+  "identity_max_error": 9.313225746154785e-10,
+  "mean_direct512_seconds": 0.5765871777807156,
+  "aggregate": {
+    "gaussian_match": {
+      "cases": 9,
+      "mean_refine_seconds": 0.6495080111102046,
+      "mean_end_to_end_seconds": 0.9057774555436077,
+      "mean_psnr_to_teacher_db": 28.032291681708234,
+      "mean_layout_psnr_to_teacher_db": 29.387837823213957,
+      "mean_edge_correlation_to_teacher": 0.634379378882451
+    },
+    "half_residue": {
+      "cases": 9,
+      "mean_refine_seconds": 0.6499325555600485,
+      "mean_end_to_end_seconds": 0.9062019999934515,
+      "mean_psnr_to_teacher_db": 28.50154059062436,
+      "mean_layout_psnr_to_teacher_db": 29.936586215270243,
+      "mean_edge_correlation_to_teacher": 0.6525774320695567
+    },
+    "raw": {
+      "cases": 9,
+      "mean_refine_seconds": 0.6479108555585198,
+      "mean_end_to_end_seconds": 0.8939356444461737,
+      "mean_psnr_to_teacher_db": 28.554349726123025,
+      "mean_layout_psnr_to_teacher_db": 30.073906733092613,
+      "mean_edge_correlation_to_teacher": 0.664985652598945
+    },
+    "sihti_core": {
+      "cases": 9,
+      "mean_refine_seconds": 0.651353611112831,
+      "mean_end_to_end_seconds": 0.907623055546234,
+      "mean_psnr_to_teacher_db": 27.914194319498602,
+      "mean_layout_psnr_to_teacher_db": 29.23066051149787,
+      "mean_edge_correlation_to_teacher": 0.6289741906900967
+    }
+  },
+  "cases": [
+    {
+      "prompt": "Oil painting of an ancient stone castle surrounded by stormy ocean waves",
+      "seed": 100,
+      "draft_seconds": 0.242687299993122,
+      "sieve_seconds": 0.0313583999814,
+      "identity_error": 0.0,
+      "gaussian_sigma": 0.5,
+      "direct512_seconds": 0.6186014999984764,
+      "teacher_seconds": 0.7636536000063643,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.643054399988614,
+          "estimated_end_to_end_seconds": 0.885741699981736,
+          "psnr_to_teacher_db": 26.89540283298664,
+          "layout_psnr_to_teacher_db": 29.048336451916654,
+          "edge_correlation_to_teacher": 0.4198673043464192,
+          "path": "results\\ai_gate0\\p01_s100_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6463592000072822,
+          "estimated_end_to_end_seconds": 0.9204048999818042,
+          "psnr_to_teacher_db": 26.818538487124144,
+          "layout_psnr_to_teacher_db": 28.90018746916575,
+          "edge_correlation_to_teacher": 0.3901911356671822,
+          "path": "results\\ai_gate0\\p01_s100_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6453984999970999,
+          "estimated_end_to_end_seconds": 0.9194441999716219,
+          "psnr_to_teacher_db": 26.414380594648662,
+          "layout_psnr_to_teacher_db": 28.320645116644926,
+          "edge_correlation_to_teacher": 0.3576017537540537,
+          "path": "results\\ai_gate0\\p01_s100_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.6440339999971911,
+          "estimated_end_to_end_seconds": 0.9180796999717131,
+          "psnr_to_teacher_db": 26.434046773721555,
+          "layout_psnr_to_teacher_db": 28.33346493685149,
+          "edge_correlation_to_teacher": 0.35102462919104,
+          "path": "results\\ai_gate0\\p01_s100_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p01_s100_contact.png"
+    },
+    {
+      "prompt": "Oil painting of an ancient stone castle surrounded by stormy ocean waves",
+      "seed": 101,
+      "draft_seconds": 0.2414719999942463,
+      "sieve_seconds": 0.007450699980836362,
+      "identity_error": 0.0,
+      "gaussian_sigma": 0.5,
+      "direct512_seconds": 0.5664864999998827,
+      "teacher_seconds": 0.7589523999777157,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6450919999915641,
+          "estimated_end_to_end_seconds": 0.8865639999858104,
+          "psnr_to_teacher_db": 30.132863660795305,
+          "layout_psnr_to_teacher_db": 31.083608178866648,
+          "edge_correlation_to_teacher": 0.45360021847385384,
+          "path": "results\\ai_gate0\\p01_s101_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6461743999971077,
+          "estimated_end_to_end_seconds": 0.8950970999721903,
+          "psnr_to_teacher_db": 29.038125437623048,
+          "layout_psnr_to_teacher_db": 29.813934299754482,
+          "edge_correlation_to_teacher": 0.3630374334361922,
+          "path": "results\\ai_gate0\\p01_s101_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6423289999947883,
+          "estimated_end_to_end_seconds": 0.891251699969871,
+          "psnr_to_teacher_db": 27.129001941204614,
+          "layout_psnr_to_teacher_db": 27.716876757096852,
+          "edge_correlation_to_teacher": 0.29574353236128137,
+          "path": "results\\ai_gate0\\p01_s101_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.6499324000033084,
+          "estimated_end_to_end_seconds": 0.8988550999783911,
+          "psnr_to_teacher_db": 27.55601565597226,
+          "layout_psnr_to_teacher_db": 28.179992261614576,
+          "edge_correlation_to_teacher": 0.30995797402960856,
+          "path": "results\\ai_gate0\\p01_s101_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p01_s101_contact.png"
+    },
+    {
+      "prompt": "Oil painting of an ancient stone castle surrounded by stormy ocean waves",
+      "seed": 102,
+      "draft_seconds": 0.24903259999700822,
+      "sieve_seconds": 0.007426099997246638,
+      "identity_error": 0.0,
+      "gaussian_sigma": 0.5,
+      "direct512_seconds": 0.565976399986539,
+      "teacher_seconds": 0.7581071000022348,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6443511000252329,
+          "estimated_end_to_end_seconds": 0.8933837000222411,
+          "psnr_to_teacher_db": 29.96017515632607,
+          "layout_psnr_to_teacher_db": 31.45986306434988,
+          "edge_correlation_to_teacher": 0.43389811567858766,
+          "path": "results\\ai_gate0\\p01_s102_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6436873000056949,
+          "estimated_end_to_end_seconds": 0.9001459999999497,
+          "psnr_to_teacher_db": 29.61397015548495,
+          "layout_psnr_to_teacher_db": 30.95926497476733,
+          "edge_correlation_to_teacher": 0.41725522078159794,
+          "path": "results\\ai_gate0\\p01_s102_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6474645000125747,
+          "estimated_end_to_end_seconds": 0.9039232000068296,
+          "psnr_to_teacher_db": 27.26844587812267,
+          "layout_psnr_to_teacher_db": 28.111147980824395,
+          "edge_correlation_to_teacher": 0.37159424588158746,
+          "path": "results\\ai_gate0\\p01_s102_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.64389909998863,
+          "estimated_end_to_end_seconds": 0.9003577999828849,
+          "psnr_to_teacher_db": 27.781441930561883,
+          "layout_psnr_to_teacher_db": 28.699005033540523,
+          "edge_correlation_to_teacher": 0.38836756838195685,
+          "path": "results\\ai_gate0\\p01_s102_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p01_s102_contact.png"
+    },
+    {
+      "prompt": "A futuristic solar bicycle parked on a Finnish forest gravel road, morning mist",
+      "seed": 100,
+      "draft_seconds": 0.24173350000637583,
+      "sieve_seconds": 0.0077126999967731535,
+      "identity_error": 9.313225746154785e-10,
+      "gaussian_sigma": 0.35,
+      "direct512_seconds": 0.5658607000077609,
+      "teacher_seconds": 0.7543495999998413,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6407885999942664,
+          "estimated_end_to_end_seconds": 0.8825221000006422,
+          "psnr_to_teacher_db": 27.396664470615942,
+          "layout_psnr_to_teacher_db": 30.681567567416913,
+          "edge_correlation_to_teacher": 0.6232481553584474,
+          "path": "results\\ai_gate0\\p02_s100_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6492070000094827,
+          "estimated_end_to_end_seconds": 0.8986532000126317,
+          "psnr_to_teacher_db": 26.994916195503855,
+          "layout_psnr_to_teacher_db": 30.190500284424694,
+          "edge_correlation_to_teacher": 0.6153147266471727,
+          "path": "results\\ai_gate0\\p02_s100_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6418046000180766,
+          "estimated_end_to_end_seconds": 0.8912508000212256,
+          "psnr_to_teacher_db": 26.595148484540317,
+          "layout_psnr_to_teacher_db": 29.71978247215557,
+          "edge_correlation_to_teacher": 0.5880234361296527,
+          "path": "results\\ai_gate0\\p02_s100_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.6429658000124618,
+          "estimated_end_to_end_seconds": 0.8924120000156108,
+          "psnr_to_teacher_db": 26.87370203833192,
+          "layout_psnr_to_teacher_db": 30.10438008864462,
+          "edge_correlation_to_teacher": 0.592581577043653,
+          "path": "results\\ai_gate0\\p02_s100_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p02_s100_contact.png"
+    },
+    {
+      "prompt": "A futuristic solar bicycle parked on a Finnish forest gravel road, morning mist",
+      "seed": 101,
+      "draft_seconds": 0.2428037000063341,
+      "sieve_seconds": 0.00739469999098219,
+      "identity_error": 0.0,
+      "gaussian_sigma": 0.35,
+      "direct512_seconds": 0.5703102000115905,
+      "teacher_seconds": 0.7543982999923173,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6439312000002246,
+          "estimated_end_to_end_seconds": 0.8867349000065587,
+          "psnr_to_teacher_db": 30.403607373529905,
+          "layout_psnr_to_teacher_db": 31.280971542885926,
+          "edge_correlation_to_teacher": 0.813626384542242,
+          "path": "results\\ai_gate0\\p02_s101_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6421875999949407,
+          "estimated_end_to_end_seconds": 0.892385999992257,
+          "psnr_to_teacher_db": 31.454050155764218,
+          "layout_psnr_to_teacher_db": 32.35951866695971,
+          "edge_correlation_to_teacher": 0.8458398369735988,
+          "path": "results\\ai_gate0\\p02_s101_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6429428999836091,
+          "estimated_end_to_end_seconds": 0.8931412999809254,
+          "psnr_to_teacher_db": 31.365433348974648,
+          "layout_psnr_to_teacher_db": 32.100574581514046,
+          "edge_correlation_to_teacher": 0.8658585511936614,
+          "path": "results\\ai_gate0\\p02_s101_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.6480179999780376,
+          "estimated_end_to_end_seconds": 0.8982163999753539,
+          "psnr_to_teacher_db": 31.16634017311886,
+          "layout_psnr_to_teacher_db": 32.05456945753809,
+          "edge_correlation_to_teacher": 0.8373039572048163,
+          "path": "results\\ai_gate0\\p02_s101_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p02_s101_contact.png"
+    },
+    {
+      "prompt": "A futuristic solar bicycle parked on a Finnish forest gravel road, morning mist",
+      "seed": 102,
+      "draft_seconds": 0.25089979998301715,
+      "sieve_seconds": 0.00735920001170598,
+      "identity_error": 0.0,
+      "gaussian_sigma": 0.35,
+      "direct512_seconds": 0.5765844999987166,
+      "teacher_seconds": 0.7991365999914706,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6540774999884889,
+          "estimated_end_to_end_seconds": 0.904977299971506,
+          "psnr_to_teacher_db": 30.56442610430217,
+          "layout_psnr_to_teacher_db": 31.53235780697136,
+          "edge_correlation_to_teacher": 0.8579850779605587,
+          "path": "results\\ai_gate0\\p02_s102_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6566670000029262,
+          "estimated_end_to_end_seconds": 0.9149259999976493,
+          "psnr_to_teacher_db": 30.791724919213554,
+          "layout_psnr_to_teacher_db": 31.6971123035904,
+          "edge_correlation_to_teacher": 0.8556196613449675,
+          "path": "results\\ai_gate0\\p02_s102_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.65460599999642,
+          "estimated_end_to_end_seconds": 0.9128649999911431,
+          "psnr_to_teacher_db": 30.67138496409399,
+          "layout_psnr_to_teacher_db": 31.59555370551004,
+          "edge_correlation_to_teacher": 0.8390835001009116,
+          "path": "results\\ai_gate0\\p02_s102_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.6512507000006735,
+          "estimated_end_to_end_seconds": 0.9095096999953967,
+          "psnr_to_teacher_db": 30.624272185181198,
+          "layout_psnr_to_teacher_db": 31.54750605762152,
+          "edge_correlation_to_teacher": 0.8605719907583652,
+          "path": "results\\ai_gate0\\p02_s102_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p02_s102_contact.png"
+    },
+    {
+      "prompt": "A cyberpunk cat wearing reflective sunglasses in a neon alley, cinematic lighting",
+      "seed": 100,
+      "draft_seconds": 0.2448173000011593,
+      "sieve_seconds": 0.007778499973937869,
+      "identity_error": 9.313225746154785e-10,
+      "gaussian_sigma": 0.35,
+      "direct512_seconds": 0.5746171000064351,
+      "teacher_seconds": 0.7695481999835465,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6534736000176053,
+          "estimated_end_to_end_seconds": 0.8982909000187647,
+          "psnr_to_teacher_db": 26.178430146514966,
+          "layout_psnr_to_teacher_db": 27.88682692062018,
+          "edge_correlation_to_teacher": 0.7341572826771828,
+          "path": "results\\ai_gate0\\p03_s100_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6541143000067677,
+          "estimated_end_to_end_seconds": 0.9067100999818649,
+          "psnr_to_teacher_db": 26.223850744396728,
+          "layout_psnr_to_teacher_db": 27.882291908632233,
+          "edge_correlation_to_teacher": 0.7358359334927946,
+          "path": "results\\ai_gate0\\p03_s100_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6646069000125863,
+          "estimated_end_to_end_seconds": 0.9172026999876834,
+          "psnr_to_teacher_db": 26.15970225782549,
+          "layout_psnr_to_teacher_db": 27.829863410554164,
+          "edge_correlation_to_teacher": 0.7154829117960327,
+          "path": "results\\ai_gate0\\p03_s100_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.6588670999917667,
+          "estimated_end_to_end_seconds": 0.9114628999668639,
+          "psnr_to_teacher_db": 26.168501411074843,
+          "layout_psnr_to_teacher_db": 27.86840578754434,
+          "edge_correlation_to_teacher": 0.722443304149471,
+          "path": "results\\ai_gate0\\p03_s100_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p03_s100_contact.png"
+    },
+    {
+      "prompt": "A cyberpunk cat wearing reflective sunglasses in a neon alley, cinematic lighting",
+      "seed": 101,
+      "draft_seconds": 0.24184740000055172,
+      "sieve_seconds": 0.007922699995106086,
+      "identity_error": 9.313225746154785e-10,
+      "gaussian_sigma": 0.5,
+      "direct512_seconds": 0.574329700000817,
+      "teacher_seconds": 0.7720137999858707,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6516775000200141,
+          "estimated_end_to_end_seconds": 0.8935249000205658,
+          "psnr_to_teacher_db": 27.863699220044573,
+          "layout_psnr_to_teacher_db": 29.01042888394525,
+          "edge_correlation_to_teacher": 0.8116981551548049,
+          "path": "results\\ai_gate0\\p03_s101_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6588206000160426,
+          "estimated_end_to_end_seconds": 0.9085907000117004,
+          "psnr_to_teacher_db": 27.85402787744698,
+          "layout_psnr_to_teacher_db": 28.894777464710796,
+          "edge_correlation_to_teacher": 0.8197594955728734,
+          "path": "results\\ai_gate0\\p03_s101_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6564448999997694,
+          "estimated_end_to_end_seconds": 0.9062149999954272,
+          "psnr_to_teacher_db": 27.785845708024134,
+          "layout_psnr_to_teacher_db": 28.769174081524987,
+          "edge_correlation_to_teacher": 0.8117657850215707,
+          "path": "results\\ai_gate0\\p03_s101_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.652040200016927,
+          "estimated_end_to_end_seconds": 0.9018103000125848,
+          "psnr_to_teacher_db": 27.700172167999394,
+          "layout_psnr_to_teacher_db": 28.701132504021146,
+          "edge_correlation_to_teacher": 0.8161136812712092,
+          "path": "results\\ai_gate0\\p03_s101_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p03_s101_contact.png"
+    },
+    {
+      "prompt": "A cyberpunk cat wearing reflective sunglasses in a neon alley, cinematic lighting",
+      "seed": 102,
+      "draft_seconds": 0.2589295000070706,
+      "sieve_seconds": 0.0077988999837543815,
+      "identity_error": 4.656612873077393e-10,
+      "gaussian_sigma": 0.5,
+      "direct512_seconds": 0.5765180000162218,
+      "teacher_seconds": 0.7725599999830592,
+      "methods": [
+        {
+          "method": "raw",
+          "refine_seconds": 0.6547518000006676,
+          "estimated_end_to_end_seconds": 0.9136813000077382,
+          "psnr_to_teacher_db": 27.593878569991634,
+          "layout_psnr_to_teacher_db": 28.681200180860657,
+          "edge_correlation_to_teacher": 0.8367901791984095,
+          "path": "results\\ai_gate0\\p03_s102_raw.png"
+        },
+        {
+          "method": "half_residue",
+          "refine_seconds": 0.6521756000001915,
+          "estimated_end_to_end_seconds": 0.9189039999910165,
+          "psnr_to_teacher_db": 27.724661343061744,
+          "layout_psnr_to_teacher_db": 28.7316885654268,
+          "edge_correlation_to_teacher": 0.8303434447096306,
+          "path": "results\\ai_gate0\\p03_s102_half_residue.png"
+        },
+        {
+          "method": "sihti_core",
+          "refine_seconds": 0.6665852000005543,
+          "estimated_end_to_end_seconds": 0.9333135999913793,
+          "psnr_to_teacher_db": 27.838405698052892,
+          "layout_psnr_to_teacher_db": 28.912326497655844,
+          "edge_correlation_to_teacher": 0.8156139999721194,
+          "path": "results\\ai_gate0\\p03_s102_sihti_core.png"
+        },
+        {
+          "method": "gaussian_match",
+          "refine_seconds": 0.654564800002845,
+          "estimated_end_to_end_seconds": 0.92129319999367,
+          "psnr_to_teacher_db": 27.986132799412204,
+          "layout_psnr_to_teacher_db": 29.002084281549312,
+          "edge_correlation_to_teacher": 0.8310497279119389,
+          "path": "results\\ai_gate0\\p03_s102_gaussian_match.png"
+        }
+      ],
+      "contact_sheet": "results\\ai_gate0\\p03_s102_contact.png"
+    }
+  ],
+  "claim_rules": {
+    "representation": "Sihti earns a representation claim only if cheap sihti_core beats cheap raw and gaussian_match on layout/edge metrics across cases.",
+    "speed": "Sihti earns a speed claim only if the quality-preserving route is faster after draft+sieve+refine overhead is counted."
+  }
+}
