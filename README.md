@@ -110,6 +110,52 @@ Limits:
 - **[AnttisVideoFX2](https://github.com/anttiluode/AnttisVideoFX2).** Frequency bands did not carry separate lifetimes in real video; three of four died together. That is why a world model built on Sihti should give lifetimes to objects, not bands.
 - **morphogen.py.** With the world removed, that loop converged to the pixel grid. Here too, long loops end on the substrate, and the scene lives in the transient and the residues.
 
+
+## AI branch: can the sieve buy diffusion compute?
+
+There is now a separate **manual GPU experiment** rather than a speed claim.
+
+The first SDXL-Turbo prototype contained an exact identity:
+
+```text
+residue = draft - core
+core + residue = draft
+```
+
+and both gains were fixed at 1. So the Core and Residue panels could change
+dramatically while the diffusion model still received the original draft.
+
+`sihti_ai_live.py` fixes that by exposing **Residue Back α**:
+
+```text
+α = 0.0  core only
+α = 0.5  restore half the residue
+α = 1.0  exact draft identity
+```
+
+The first GPU gate is pre-registered in [AI_GATE0.md](AI_GATE0.md). It compares
+cheap refinement from the raw draft, Sihti core, half-restored residue, and a
+Gaussian blur matched to the same draft→core distortion. It records direct
+512×512 latency, draft/sieve/refinement latency, layout PSNR, edge correlation,
+and the exact telescoping identity error.
+
+Run it on a CUDA machine with SDXL-Turbo cached:
+
+```bash
+pip install -r requirements-ai.txt
+python ai_gate0_sdxl_turbo.py --local-only
+```
+
+A heavier receipt:
+
+```bash
+python ai_gate0_sdxl_turbo.py --local-only --seeds 100 101 102
+```
+
+No acceleration is claimed until that output exists. A route only wins if it
+preserves a declared quality frontier **and** is faster after draft + sieve +
+refinement overhead is counted.
+
 ## Next: v1, common fate (not built)
 
 Add a slow state that pulls together colours that moved together, and let it write the operator. The demo: stand still and the loop splits you into face, shirt and trousers. Walk across the room, and the co-motion writes the EQ. Stand still again and you are one object.
