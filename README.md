@@ -24,7 +24,7 @@ python sihti_live.py photo.jpg    # or on your own image
 
 On Windows you can double-click `run_sihti.bat`. OpenCV is only needed for the webcam.
 
-![the live app](figures/app.png)
+![the live app](pic.png)
 
 - **Input** is the working image. It is small on purpose (96 px by default): this is an instrument, not a filter.
 - **Loop** is the image purified to the depth on the slider. Space plays the movie.
