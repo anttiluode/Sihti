@@ -170,6 +170,25 @@ diffusion accelerator or compute router. The surviving compute-routing idea is
 being handed to WhatToLookAt with the cheapest winning observable rather than
 forcing the Sihti residue to win.
 
+## Later-day null: what does Sihti see in noise?
+
+This is now frozen as a **future null study**, not promoted to a result. A random image still writes a random weighted graph, so accidental bottlenecks can become long-lived and may look object-like. The safe interpretation is therefore:
+
+> **slow mode = persistent structure under the chosen operator; objecthood needs extra evidence.**
+
+Run the interactive null laboratory:
+
+```bash
+python noise_lab.py
+python noise_lab.py photo.jpg   # phase-scramble your own reference image
+```
+
+On Windows, `run_noise_lab.bat` launches it directly.
+
+The lab switches among **IID noise, blurred noise, 1/f-power noise, and a phase-scrambled reference**, and among **Own EQ, Lattice, and Sigh high-pass**. It shows the current depth, octave residue, deep core, input-graph slow modes, and—critically—the absolute RMS trajectory so late auto-contrast cannot make a vanishing mode look important.
+
+The later-day test plan is in [LATER_DAY_NOISE_TESTS.md](LATER_DAY_NOISE_TESTS.md). Its main attacks are the sigma transition on IID noise, correlated and 1/f nulls, phase-scrambled natural images, the same-noise/different-purifier operator fingerprint, and perturbation stability. The object language gets downgraded if noise produces slow regions as strong and stable as natural images.
+
 ## Next: v1, common fate (not built)
 
 Add a slow state that pulls together colours that moved together, and let it write the operator. The demo: stand still and the loop splits you into face, shirt and trousers. Walk across the room, and the co-motion writes the EQ. Stand still again and you are one object.
@@ -190,6 +209,9 @@ sihti/            the package (numpy, scipy, pillow)
   modes.py        slow modes, painting, segments, substrate share
   pipeline.py     analyse(): the whole instrument in one call
 sihti_live.py     the live app (tkinter)
+noise_lab.py      interactive noise / null-input visualizer
+run_noise_lab.bat Windows launcher for the noise lab
+LATER_DAY_NOISE_TESTS.md  frozen future null-study plan
 gates.py          G0-G2  -> results/GATES.json
 bench_bsds.py     G3-G4 on BSDS500 -> results/BSDS_VAL.json, results/BSDS_TEST.json
 make_figures.py   figures/
