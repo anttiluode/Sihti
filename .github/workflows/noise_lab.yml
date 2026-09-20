@@ -1,0 +1,28 @@
+name: Noise null lab smoke
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install numpy scipy pillow matplotlib pytest
+      - run: python -m pytest -q tests/test_noise_lab.py
+      - name: Render headless visualizer smoke
+        env:
+          MPLBACKEND: Agg
+        run: python noise_lab.py --size 32 --J 4 --save noise_lab_smoke.png --no-show
+      - uses: actions/upload-artifact@v4
+        with:
+          name: noise-lab-smoke
+          path: noise_lab_smoke.png
