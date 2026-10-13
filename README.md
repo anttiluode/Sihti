@@ -189,6 +189,33 @@ The lab switches among **IID noise, blurred noise, 1/f-power noise, and a phase-
 
 The later-day test plan is in [LATER_DAY_NOISE_TESTS.md](LATER_DAY_NOISE_TESTS.md). Its main attacks are the sigma transition on IID noise, correlated and 1/f nulls, phase-scrambled natural images, the same-noise/different-purifier operator fingerprint, and perturbation stability. The object language gets downgraded if noise produces slow regions as strong and stable as natural images.
 
+## The eyes: when do they stop being *these* eyes?
+
+Antti's observation on the totem picture: as the purifier runs, the statues' faces lose their eyes at some depth. This section measures that on 43 faces with hand-annotated eye landmarks (dlib's example set, with dlib's own 18 train / 25 test split). [Pre-registered](EYE_PREREG.md) before any score was computed · [code](eye_persistence.py) · [all numbers](results/eye/eye_results.json).
+
+Two readers score the eye patch:
+
+- **Identity** ("remembering"): does the patch still match *its own* original best among the 25 test faces?
+- **Generic eye-likeness** ("imagining"): how strongly does it correlate with the average eye of the 18 training faces?
+
+![eyes](figures/eyes.png)
+
+**Persistence.** The own EQ keeps the eyes about four times deeper than plain diffusion: identity falls below 70% at depth 32 for the own EQ and at depth 8 for plain diffusion. Identity holds at 25/25 through depth 16 and collapses between 16 and 32 (to 15/25). Plain diffusion already drops to 17/25 at depth 8. Both lose identity long before the face disappears.
+
+**Generic eye-likeness *rises* while identity falls** (+10% own EQ, +15% plain diffusion, peaking around depth 8–16). Purification first moves each face's eyes toward the *average* eye, and only later erases eyes altogether. That is the remembering/imagining split, happening inside the purifier itself. The mechanical reason is plain: smoothing makes every eye patch more like a smooth mean template.
+
+**The eyes live in one residue.** A residue order learned on the 18 training faces (greedy, identity gained per byte) picks first the residue that bleeds out between depths 16 and 32, exactly where test identity collapses. The 64→128 residue comes second. The natural deep-first order spends bytes on layout and background first.
+
+| verdict (pre-registered) | result | numbers (mean bytes per face to reach 23/25 identity) |
+|---|---|---|
+| V1 learned order beats deep-first | **PASS** | 2,496 vs 3,458 (0.72×) |
+| V2 Sihti beats classical codecs | **FAIL, as predicted** | Sihti 2,496 vs JPEG **398** (6.3× worse); Laplacian pyramid 1,209 |
+| V3 eye-like without identity | 26 configurations | coarse Sihti, plain diffusion and pyramid reconstructions: generic score ≥ 0.9 of original, identity < 50% |
+
+So the codec question is closed. Storing Sihti's residues is not an efficient way to keep specific eyes: they are eleven full-resolution arrays, and JPEG is 6× cheaper. What survives is the measurement. The sieve gives each feature a lifetime curve, and the depth at which a feature dies tells a learner which single residue carries it.
+
+Limits: 43 small faces (37–109 px boxes, upsampled to 64 px), one purifier setting, 25-way identity within one test set. This is a pilot.
+
 ## Next: v1, common fate (not built)
 
 Add a slow state that pulls together colours that moved together, and let it write the operator. The demo: stand still and the loop splits you into face, shirt and trousers. Walk across the room, and the co-motion writes the EQ. Stand still again and you are one object.
@@ -215,6 +242,8 @@ LATER_DAY_NOISE_TESTS.md  frozen future null-study plan
 gates.py          G0-G2  -> results/GATES.json
 bench_bsds.py     G3-G4 on BSDS500 -> results/BSDS_VAL.json, results/BSDS_TEST.json
 make_figures.py   figures/
+eye_persistence.py  eye lifetimes + bytes-matched recovery -> results/eye/ (EYE_PREREG.md)
+make_eye_figure.py  figures/eyes.png
 tests/            pytest
 ```
 

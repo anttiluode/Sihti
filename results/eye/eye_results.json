@@ -1,0 +1,2345 @@
+{
+  "prereg": "EYE_PREREG.md",
+  "faces": {
+    "train": 18,
+    "test": 25
+  },
+  "face_box_px": [
+    37.0,
+    109.0
+  ],
+  "depths": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "original_identification": 1.0,
+  "persistence": {
+    "self": {
+      "lossless_max_error": 1.0408340855860843e-17,
+      "curve": [
+        {
+          "depth": 0,
+          "accuracy": 1.0,
+          "mean_c_own": 1.0,
+          "mean_generic_rel": 1.0
+        },
+        {
+          "depth": 1,
+          "accuracy": 1.0,
+          "mean_c_own": 0.9966158290281912,
+          "mean_generic_rel": 1.0288429164557864
+        },
+        {
+          "depth": 2,
+          "accuracy": 1.0,
+          "mean_c_own": 0.9901347049495284,
+          "mean_generic_rel": 1.0477014110924867
+        },
+        {
+          "depth": 4,
+          "accuracy": 1.0,
+          "mean_c_own": 0.9754406738084982,
+          "mean_generic_rel": 1.070675763022009
+        },
+        {
+          "depth": 8,
+          "accuracy": 1.0,
+          "mean_c_own": 0.9472291621905796,
+          "mean_generic_rel": 1.0904951539235794
+        },
+        {
+          "depth": 16,
+          "accuracy": 1.0,
+          "mean_c_own": 0.8990483437273152,
+          "mean_generic_rel": 1.0946134955236035
+        },
+        {
+          "depth": 32,
+          "accuracy": 0.6,
+          "mean_c_own": 0.8255591482244994,
+          "mean_generic_rel": 1.072507842260027
+        },
+        {
+          "depth": 64,
+          "accuracy": 0.44,
+          "mean_c_own": 0.7324828523636837,
+          "mean_generic_rel": 1.0291110222118676
+        },
+        {
+          "depth": 128,
+          "accuracy": 0.32,
+          "mean_c_own": 0.6405943150934047,
+          "mean_generic_rel": 0.9741188509826385
+        },
+        {
+          "depth": 256,
+          "accuracy": 0.2,
+          "mean_c_own": 0.563935386741268,
+          "mean_generic_rel": 0.9490658345091048
+        },
+        {
+          "depth": 512,
+          "accuracy": 0.2,
+          "mean_c_own": 0.4470000316080749,
+          "mean_generic_rel": 0.8360768527368749
+        }
+      ],
+      "eye_half_life_per_face": [
+        512,
+        null,
+        null,
+        512,
+        null,
+        null,
+        256,
+        512,
+        null,
+        128,
+        512,
+        128,
+        null,
+        512,
+        512,
+        256,
+        null,
+        128,
+        null,
+        128,
+        null,
+        128,
+        null,
+        128,
+        null
+      ]
+    },
+    "lattice": {
+      "lossless_max_error": 1.3877787807814457e-17,
+      "curve": [
+        {
+          "depth": 0,
+          "accuracy": 1.0,
+          "mean_c_own": 1.0,
+          "mean_generic_rel": 1.0
+        },
+        {
+          "depth": 1,
+          "accuracy": 1.0,
+          "mean_c_own": 0.9860857245872929,
+          "mean_generic_rel": 1.0740265481760871
+        },
+        {
+          "depth": 2,
+          "accuracy": 1.0,
+          "mean_c_own": 0.9611024785492216,
+          "mean_generic_rel": 1.1122564095431844
+        },
+        {
+          "depth": 4,
+          "accuracy": 0.96,
+          "mean_c_own": 0.9151822436132153,
+          "mean_generic_rel": 1.1431355907663296
+        },
+        {
+          "depth": 8,
+          "accuracy": 0.68,
+          "mean_c_own": 0.8560670036504311,
+          "mean_generic_rel": 1.1512306842809523
+        },
+        {
+          "depth": 16,
+          "accuracy": 0.56,
+          "mean_c_own": 0.7894078518049887,
+          "mean_generic_rel": 1.129643038827025
+        },
+        {
+          "depth": 32,
+          "accuracy": 0.32,
+          "mean_c_own": 0.7064075853734271,
+          "mean_generic_rel": 1.079711534947691
+        },
+        {
+          "depth": 64,
+          "accuracy": 0.2,
+          "mean_c_own": 0.6067181395864216,
+          "mean_generic_rel": 1.0188908752502552
+        },
+        {
+          "depth": 128,
+          "accuracy": 0.16,
+          "mean_c_own": 0.4945576317333004,
+          "mean_generic_rel": 0.9616310151776879
+        },
+        {
+          "depth": 256,
+          "accuracy": 0.16,
+          "mean_c_own": 0.3998199893923767,
+          "mean_generic_rel": 0.7510794045421855
+        },
+        {
+          "depth": 512,
+          "accuracy": 0.0,
+          "mean_c_own": 0.3160097788272857,
+          "mean_generic_rel": 0.4970346363870701
+        }
+      ],
+      "eye_half_life_per_face": [
+        256,
+        null,
+        512,
+        256,
+        128,
+        null,
+        64,
+        512,
+        null,
+        64,
+        256,
+        64,
+        null,
+        512,
+        128,
+        128,
+        64,
+        64,
+        null,
+        128,
+        null,
+        128,
+        256,
+        64,
+        null
+      ]
+    }
+  },
+  "learned_order": {
+    "order": [
+      5,
+      7,
+      2,
+      3,
+      8,
+      1,
+      6,
+      0,
+      9,
+      4
+    ],
+    "trace": [
+      {
+        "residue": 5,
+        "train_c_own_after": 0.77334,
+        "mean_bytes": 1761.7
+      },
+      {
+        "residue": 7,
+        "train_c_own_after": 0.87218,
+        "mean_bytes": 1497.6
+      },
+      {
+        "residue": 2,
+        "train_c_own_after": 0.94059,
+        "mean_bytes": 1809.0
+      },
+      {
+        "residue": 3,
+        "train_c_own_after": 0.96153,
+        "mean_bytes": 1872.2
+      },
+      {
+        "residue": 8,
+        "train_c_own_after": 0.97931,
+        "mean_bytes": 1391.7
+      },
+      {
+        "residue": 1,
+        "train_c_own_after": 0.98637,
+        "mean_bytes": 1535.0
+      },
+      {
+        "residue": 6,
+        "train_c_own_after": 0.98945,
+        "mean_bytes": 1638.6
+      },
+      {
+        "residue": 0,
+        "train_c_own_after": 0.99212,
+        "mean_bytes": 2567.1
+      },
+      {
+        "residue": 9,
+        "train_c_own_after": 0.99065,
+        "mean_bytes": 1246.9
+      },
+      {
+        "residue": 4,
+        "train_c_own_after": 0.99578,
+        "mean_bytes": 1854.3
+      }
+    ],
+    "natural_order": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  "methods": {
+    "sihti_natural": [
+      {
+        "config": "q=1/16 k=0",
+        "mean_bytes": 824.84,
+        "accuracy": 0.2,
+        "mean_c_own": 0.4124126485679539,
+        "mean_generic_rel": 0.7799804245797065
+      },
+      {
+        "config": "q=1/16 k=1",
+        "mean_bytes": 1313.2,
+        "accuracy": 0.24,
+        "mean_c_own": 0.5060849916177836,
+        "mean_generic_rel": 0.9191781024355429
+      },
+      {
+        "config": "q=1/16 k=2",
+        "mean_bytes": 1781.56,
+        "accuracy": 0.32,
+        "mean_c_own": 0.5852741293543596,
+        "mean_generic_rel": 0.9802211212953806
+      },
+      {
+        "config": "q=1/16 k=3",
+        "mean_bytes": 2209.6,
+        "accuracy": 0.48,
+        "mean_c_own": 0.6329204399761267,
+        "mean_generic_rel": 0.9650636775532669
+      },
+      {
+        "config": "q=1/16 k=4",
+        "mean_bytes": 2600.2,
+        "accuracy": 0.6,
+        "mean_c_own": 0.669602820293083,
+        "mean_generic_rel": 0.9679405115969516
+      },
+      {
+        "config": "q=1/16 k=5",
+        "mean_bytes": 2944.24,
+        "accuracy": 0.68,
+        "mean_c_own": 0.7199034518578015,
+        "mean_generic_rel": 0.9879951578991125
+      },
+      {
+        "config": "q=1/16 k=6",
+        "mean_bytes": 3237.56,
+        "accuracy": 0.84,
+        "mean_c_own": 0.7549077130967692,
+        "mean_generic_rel": 0.9929122287144933
+      },
+      {
+        "config": "q=1/16 k=7",
+        "mean_bytes": 3458.48,
+        "accuracy": 0.92,
+        "mean_c_own": 0.770421150828449,
+        "mean_generic_rel": 0.9878571779120372
+      },
+      {
+        "config": "q=1/16 k=8",
+        "mean_bytes": 3589.68,
+        "accuracy": 0.92,
+        "mean_c_own": 0.774202762874493,
+        "mean_generic_rel": 0.9820773844749675
+      },
+      {
+        "config": "q=1/16 k=9",
+        "mean_bytes": 3668.28,
+        "accuracy": 0.92,
+        "mean_c_own": 0.7745820205688928,
+        "mean_generic_rel": 0.9807496776625441
+      },
+      {
+        "config": "q=1/16 k=10",
+        "mean_bytes": 3921.4,
+        "accuracy": 0.96,
+        "mean_c_own": 0.7797377270068863,
+        "mean_generic_rel": 0.9698913917279952
+      },
+      {
+        "config": "q=1/32 k=0",
+        "mean_bytes": 1284.36,
+        "accuracy": 0.2,
+        "mean_c_own": 0.42889508219532535,
+        "mean_generic_rel": 0.7876976073543857
+      },
+      {
+        "config": "q=1/32 k=1",
+        "mean_bytes": 2085.64,
+        "accuracy": 0.24,
+        "mean_c_own": 0.5440105146507132,
+        "mean_generic_rel": 0.8656689493441379
+      },
+      {
+        "config": "q=1/32 k=2",
+        "mean_bytes": 2957.24,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6183034495447719,
+        "mean_generic_rel": 0.908011086554054
+      },
+      {
+        "config": "q=1/32 k=3",
+        "mean_bytes": 3906.64,
+        "accuracy": 0.4,
+        "mean_c_own": 0.7159081975735806,
+        "mean_generic_rel": 1.0032774133338012
+      },
+      {
+        "config": "q=1/32 k=4",
+        "mean_bytes": 4899.08,
+        "accuracy": 0.56,
+        "mean_c_own": 0.8018510817856688,
+        "mean_generic_rel": 1.0490145978073264
+      },
+      {
+        "config": "q=1/32 k=5",
+        "mean_bytes": 5906.48,
+        "accuracy": 1.0,
+        "mean_c_own": 0.8671703852648835,
+        "mean_generic_rel": 1.072618577075205
+      },
+      {
+        "config": "q=1/32 k=6",
+        "mean_bytes": 6854.56,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9115920249267798,
+        "mean_generic_rel": 1.08074007301576
+      },
+      {
+        "config": "q=1/32 k=7",
+        "mean_bytes": 7698.72,
+        "accuracy": 1.0,
+        "mean_c_own": 0.937452330193732,
+        "mean_generic_rel": 1.0694362203129142
+      },
+      {
+        "config": "q=1/32 k=8",
+        "mean_bytes": 8406.4,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9499465772164771,
+        "mean_generic_rel": 1.0538861590065758
+      },
+      {
+        "config": "q=1/32 k=9",
+        "mean_bytes": 8860.88,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9535098640768547,
+        "mean_generic_rel": 1.0441335969076326
+      },
+      {
+        "config": "q=1/32 k=10",
+        "mean_bytes": 10032.16,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9608138788471032,
+        "mean_generic_rel": 1.0209966794656677
+      },
+      {
+        "config": "q=1/64 k=0",
+        "mean_bytes": 2011.48,
+        "accuracy": 0.2,
+        "mean_c_own": 0.4394367159147727,
+        "mean_generic_rel": 0.8202505273018798
+      },
+      {
+        "config": "q=1/64 k=1",
+        "mean_bytes": 3298.8,
+        "accuracy": 0.24,
+        "mean_c_own": 0.5611625648481414,
+        "mean_generic_rel": 0.9351444557575614
+      },
+      {
+        "config": "q=1/64 k=2",
+        "mean_bytes": 4692.24,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6389785827300014,
+        "mean_generic_rel": 0.9671522184689372
+      },
+      {
+        "config": "q=1/64 k=3",
+        "mean_bytes": 6243.48,
+        "accuracy": 0.4,
+        "mean_c_own": 0.7321038619696855,
+        "mean_generic_rel": 1.023527565477759
+      },
+      {
+        "config": "q=1/64 k=4",
+        "mean_bytes": 7913.56,
+        "accuracy": 0.6,
+        "mean_c_own": 0.8234451916098038,
+        "mean_generic_rel": 1.0645735536992353
+      },
+      {
+        "config": "q=1/64 k=5",
+        "mean_bytes": 9692.16,
+        "accuracy": 1.0,
+        "mean_c_own": 0.896138554305315,
+        "mean_generic_rel": 1.086050124078639
+      },
+      {
+        "config": "q=1/64 k=6",
+        "mean_bytes": 11538.6,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9439668834599756,
+        "mean_generic_rel": 1.0818238772413722
+      },
+      {
+        "config": "q=1/64 k=7",
+        "mean_bytes": 13390.76,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9720018431774655,
+        "mean_generic_rel": 1.0644877917793067
+      },
+      {
+        "config": "q=1/64 k=8",
+        "mean_bytes": 15159.6,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9861626171561098,
+        "mean_generic_rel": 1.043330162591386
+      },
+      {
+        "config": "q=1/64 k=9",
+        "mean_bytes": 16634.72,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9920374896039632,
+        "mean_generic_rel": 1.026433402863212
+      },
+      {
+        "config": "q=1/64 k=10",
+        "mean_bytes": 19188.56,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9954218342311572,
+        "mean_generic_rel": 0.9968448362658812
+      },
+      {
+        "config": "q=1/128 k=0",
+        "mean_bytes": 3232.76,
+        "accuracy": 0.2,
+        "mean_c_own": 0.44738328374221775,
+        "mean_generic_rel": 0.8321202284396939
+      },
+      {
+        "config": "q=1/128 k=1",
+        "mean_bytes": 5293.0,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5633744488570539,
+        "mean_generic_rel": 0.9484004761898376
+      },
+      {
+        "config": "q=1/128 k=2",
+        "mean_bytes": 7536.6,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6395908488024868,
+        "mean_generic_rel": 0.9715806717801244
+      },
+      {
+        "config": "q=1/128 k=3",
+        "mean_bytes": 10043.56,
+        "accuracy": 0.44,
+        "mean_c_own": 0.7311316352882983,
+        "mean_generic_rel": 1.0274326734068382
+      },
+      {
+        "config": "q=1/128 k=4",
+        "mean_bytes": 12799.68,
+        "accuracy": 0.6,
+        "mean_c_own": 0.8246774067681362,
+        "mean_generic_rel": 1.0709902471635402
+      },
+      {
+        "config": "q=1/128 k=5",
+        "mean_bytes": 15739.24,
+        "accuracy": 1.0,
+        "mean_c_own": 0.8981423013750001,
+        "mean_generic_rel": 1.0937059660490704
+      },
+      {
+        "config": "q=1/128 k=6",
+        "mean_bytes": 18810.72,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9464327006579188,
+        "mean_generic_rel": 1.0895309020020278
+      },
+      {
+        "config": "q=1/128 k=7",
+        "mean_bytes": 21975.44,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9746566962474361,
+        "mean_generic_rel": 1.0696920382241093
+      },
+      {
+        "config": "q=1/128 k=8",
+        "mean_bytes": 25172.36,
+        "accuracy": 1.0,
+        "mean_c_own": 0.989352394622125,
+        "mean_generic_rel": 1.0464501641438841
+      },
+      {
+        "config": "q=1/128 k=9",
+        "mean_bytes": 28080.96,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9958105810702389,
+        "mean_generic_rel": 1.027741529553274
+      },
+      {
+        "config": "q=1/128 k=10",
+        "mean_bytes": 32335.12,
+        "accuracy": 1.0,
+        "mean_c_own": 0.999248308781599,
+        "mean_generic_rel": 0.9993154416752722
+      }
+    ],
+    "sihti_learned": [
+      {
+        "config": "q=1/16 k=0",
+        "mean_bytes": 824.84,
+        "accuracy": 0.2,
+        "mean_c_own": 0.4124126485679539,
+        "mean_generic_rel": 0.7799804245797065
+      },
+      {
+        "config": "q=1/16 k=1",
+        "mean_bytes": 1168.88,
+        "accuracy": 0.48,
+        "mean_c_own": 0.5758766337927262,
+        "mean_generic_rel": 0.8900452380371275
+      },
+      {
+        "config": "q=1/16 k=2",
+        "mean_bytes": 1596.92,
+        "accuracy": 0.56,
+        "mean_c_own": 0.6858956689569164,
+        "mean_generic_rel": 0.9742763988856139
+      },
+      {
+        "config": "q=1/16 k=3",
+        "mean_bytes": 1728.12,
+        "accuracy": 0.6,
+        "mean_c_own": 0.6994826678246869,
+        "mean_generic_rel": 0.9696594869349292
+      },
+      {
+        "config": "q=1/16 k=4",
+        "mean_bytes": 1949.04,
+        "accuracy": 0.76,
+        "mean_c_own": 0.7280018034160964,
+        "mean_generic_rel": 0.9585858357355473
+      },
+      {
+        "config": "q=1/16 k=5",
+        "mean_bytes": 2417.4,
+        "accuracy": 0.88,
+        "mean_c_own": 0.7646164361262346,
+        "mean_generic_rel": 1.019249826259952
+      },
+      {
+        "config": "q=1/16 k=6",
+        "mean_bytes": 2496.0,
+        "accuracy": 0.92,
+        "mean_c_own": 0.7651141313067381,
+        "mean_generic_rel": 1.016729311306183
+      },
+      {
+        "config": "q=1/16 k=7",
+        "mean_bytes": 2886.6,
+        "accuracy": 0.88,
+        "mean_c_own": 0.7745454357226015,
+        "mean_generic_rel": 0.9893362067999568
+      },
+      {
+        "config": "q=1/16 k=8",
+        "mean_bytes": 3139.72,
+        "accuracy": 0.96,
+        "mean_c_own": 0.7805674391328212,
+        "mean_generic_rel": 0.9729666360801424
+      },
+      {
+        "config": "q=1/16 k=9",
+        "mean_bytes": 3628.08,
+        "accuracy": 0.84,
+        "mean_c_own": 0.760991310738233,
+        "mean_generic_rel": 0.9785016212119843
+      },
+      {
+        "config": "q=1/16 k=10",
+        "mean_bytes": 3921.4,
+        "accuracy": 0.96,
+        "mean_c_own": 0.7797377270068863,
+        "mean_generic_rel": 0.9698913917279952
+      },
+      {
+        "config": "q=1/32 k=0",
+        "mean_bytes": 1284.36,
+        "accuracy": 0.2,
+        "mean_c_own": 0.42889508219532535,
+        "mean_generic_rel": 0.7876976073543857
+      },
+      {
+        "config": "q=1/32 k=1",
+        "mean_bytes": 2291.76,
+        "accuracy": 0.84,
+        "mean_c_own": 0.7592133777800928,
+        "mean_generic_rel": 1.0212813068859798
+      },
+      {
+        "config": "q=1/32 k=2",
+        "mean_bytes": 3241.16,
+        "accuracy": 0.92,
+        "mean_c_own": 0.8565501099284424,
+        "mean_generic_rel": 1.127692874489754
+      },
+      {
+        "config": "q=1/32 k=3",
+        "mean_bytes": 3948.84,
+        "accuracy": 1.0,
+        "mean_c_own": 0.903559358415461,
+        "mean_generic_rel": 1.105711689393942
+      },
+      {
+        "config": "q=1/32 k=4",
+        "mean_bytes": 4793.0,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9252165061387662,
+        "mean_generic_rel": 1.0539817804429077
+      },
+      {
+        "config": "q=1/32 k=5",
+        "mean_bytes": 5664.6,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9367385345993139,
+        "mean_generic_rel": 1.080499404633099
+      },
+      {
+        "config": "q=1/32 k=6",
+        "mean_bytes": 6119.08,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9400629081543527,
+        "mean_generic_rel": 1.0626012862903595
+      },
+      {
+        "config": "q=1/32 k=7",
+        "mean_bytes": 7111.52,
+        "accuracy": 1.0,
+        "mean_c_own": 0.947724358296534,
+        "mean_generic_rel": 1.0561304526610706
+      },
+      {
+        "config": "q=1/32 k=8",
+        "mean_bytes": 8282.8,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9552507183322946,
+        "mean_generic_rel": 1.0254761586679613
+      },
+      {
+        "config": "q=1/32 k=9",
+        "mean_bytes": 9084.08,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9503031496946481,
+        "mean_generic_rel": 1.0313889286042064
+      },
+      {
+        "config": "q=1/32 k=10",
+        "mean_bytes": 10032.16,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9608138788471032,
+        "mean_generic_rel": 1.0209966794656677
+      },
+      {
+        "config": "q=1/64 k=0",
+        "mean_bytes": 2011.48,
+        "accuracy": 0.2,
+        "mean_c_own": 0.4394367159147727,
+        "mean_generic_rel": 0.8202505273018798
+      },
+      {
+        "config": "q=1/64 k=1",
+        "mean_bytes": 3790.08,
+        "accuracy": 0.84,
+        "mean_c_own": 0.7996495802037582,
+        "mean_generic_rel": 1.064812552691307
+      },
+      {
+        "config": "q=1/64 k=2",
+        "mean_bytes": 5341.32,
+        "accuracy": 0.96,
+        "mean_c_own": 0.8879843033237341,
+        "mean_generic_rel": 1.1256303298103802
+      },
+      {
+        "config": "q=1/64 k=3",
+        "mean_bytes": 7110.16,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9454080385672858,
+        "mean_generic_rel": 1.0926637281959324
+      },
+      {
+        "config": "q=1/64 k=4",
+        "mean_bytes": 8962.32,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9671894426082737,
+        "mean_generic_rel": 1.036882855364417
+      },
+      {
+        "config": "q=1/64 k=5",
+        "mean_bytes": 10355.76,
+        "accuracy": 1.0,
+        "mean_c_own": 0.979594268539961,
+        "mean_generic_rel": 1.074057192223414
+      },
+      {
+        "config": "q=1/64 k=6",
+        "mean_bytes": 11830.88,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9857172809779111,
+        "mean_generic_rel": 1.0443290510897918
+      },
+      {
+        "config": "q=1/64 k=7",
+        "mean_bytes": 13500.96,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9890199332280446,
+        "mean_generic_rel": 1.036538063299744
+      },
+      {
+        "config": "q=1/64 k=8",
+        "mean_bytes": 16054.8,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9913823719585828,
+        "mean_generic_rel": 0.997564734948907
+      },
+      {
+        "config": "q=1/64 k=9",
+        "mean_bytes": 17342.12,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9902860967744034,
+        "mean_generic_rel": 1.0159244531717726
+      },
+      {
+        "config": "q=1/64 k=10",
+        "mean_bytes": 19188.56,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9954218342311572,
+        "mean_generic_rel": 0.9968448362658812
+      },
+      {
+        "config": "q=1/128 k=0",
+        "mean_bytes": 3232.76,
+        "accuracy": 0.2,
+        "mean_c_own": 0.44738328374221775,
+        "mean_generic_rel": 0.8321202284396939
+      },
+      {
+        "config": "q=1/128 k=1",
+        "mean_bytes": 6172.32,
+        "accuracy": 0.84,
+        "mean_c_own": 0.8058067913588249,
+        "mean_generic_rel": 1.0737079097381066
+      },
+      {
+        "config": "q=1/128 k=2",
+        "mean_bytes": 8679.28,
+        "accuracy": 0.88,
+        "mean_c_own": 0.8914024555848777,
+        "mean_generic_rel": 1.1338328288855617
+      },
+      {
+        "config": "q=1/128 k=3",
+        "mean_bytes": 11876.2,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9515045125089836,
+        "mean_generic_rel": 1.0960220583632474
+      },
+      {
+        "config": "q=1/128 k=4",
+        "mean_bytes": 15040.92,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9728190630170023,
+        "mean_generic_rel": 1.0349920496480594
+      },
+      {
+        "config": "q=1/128 k=5",
+        "mean_bytes": 17284.52,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9842621347744857,
+        "mean_generic_rel": 1.070633846890409
+      },
+      {
+        "config": "q=1/128 k=6",
+        "mean_bytes": 20193.12,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9916005760878808,
+        "mean_generic_rel": 1.0385716600581467
+      },
+      {
+        "config": "q=1/128 k=7",
+        "mean_bytes": 22949.24,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9935056900972455,
+        "mean_generic_rel": 1.0317763288283082
+      },
+      {
+        "config": "q=1/128 k=8",
+        "mean_bytes": 27203.4,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9958359474031893,
+        "mean_generic_rel": 0.9944884165310257
+      },
+      {
+        "config": "q=1/128 k=9",
+        "mean_bytes": 29263.64,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9945938384851254,
+        "mean_generic_rel": 1.0184935710218685
+      },
+      {
+        "config": "q=1/128 k=10",
+        "mean_bytes": 32335.12,
+        "accuracy": 1.0,
+        "mean_c_own": 0.999248308781599,
+        "mean_generic_rel": 0.9993154416752722
+      }
+    ],
+    "sihti_lattice": [
+      {
+        "config": "q=1/16 k=0",
+        "mean_bytes": 482.68,
+        "accuracy": 0.04,
+        "mean_c_own": 0.27416031293259285,
+        "mean_generic_rel": 0.3824776588545697
+      },
+      {
+        "config": "q=1/16 k=1",
+        "mean_bytes": 886.44,
+        "accuracy": 0.12,
+        "mean_c_own": 0.3310226478171806,
+        "mean_generic_rel": 0.5709649657604332
+      },
+      {
+        "config": "q=1/16 k=2",
+        "mean_bytes": 1363.68,
+        "accuracy": 0.12,
+        "mean_c_own": 0.4063066811577857,
+        "mean_generic_rel": 0.7059249072041441
+      },
+      {
+        "config": "q=1/16 k=3",
+        "mean_bytes": 1929.72,
+        "accuracy": 0.16,
+        "mean_c_own": 0.5212049577006527,
+        "mean_generic_rel": 0.8185546233353638
+      },
+      {
+        "config": "q=1/16 k=4",
+        "mean_bytes": 2506.04,
+        "accuracy": 0.28,
+        "mean_c_own": 0.5955649875767112,
+        "mean_generic_rel": 0.8368517878810349
+      },
+      {
+        "config": "q=1/16 k=5",
+        "mean_bytes": 3082.8,
+        "accuracy": 0.44,
+        "mean_c_own": 0.6304520040305218,
+        "mean_generic_rel": 0.8582752256679512
+      },
+      {
+        "config": "q=1/16 k=6",
+        "mean_bytes": 3650.8,
+        "accuracy": 0.48,
+        "mean_c_own": 0.6602265670225991,
+        "mean_generic_rel": 0.872650748124411
+      },
+      {
+        "config": "q=1/16 k=7",
+        "mean_bytes": 4168.48,
+        "accuracy": 0.48,
+        "mean_c_own": 0.6928573704490961,
+        "mean_generic_rel": 0.8878106504613313
+      },
+      {
+        "config": "q=1/16 k=8",
+        "mean_bytes": 4675.24,
+        "accuracy": 0.76,
+        "mean_c_own": 0.7280137916307362,
+        "mean_generic_rel": 0.894669474887443
+      },
+      {
+        "config": "q=1/16 k=9",
+        "mean_bytes": 5089.56,
+        "accuracy": 0.84,
+        "mean_c_own": 0.7469991811633839,
+        "mean_generic_rel": 0.8795673157587913
+      },
+      {
+        "config": "q=1/16 k=10",
+        "mean_bytes": 6045.6,
+        "accuracy": 0.92,
+        "mean_c_own": 0.7927406502420153,
+        "mean_generic_rel": 0.8347432538866749
+      },
+      {
+        "config": "q=1/32 k=0",
+        "mean_bytes": 786.32,
+        "accuracy": 0.04,
+        "mean_c_own": 0.2962745528370786,
+        "mean_generic_rel": 0.45804460975369266
+      },
+      {
+        "config": "q=1/32 k=1",
+        "mean_bytes": 1455.64,
+        "accuracy": 0.12,
+        "mean_c_own": 0.38954148790980314,
+        "mean_generic_rel": 0.7267644142972997
+      },
+      {
+        "config": "q=1/32 k=2",
+        "mean_bytes": 2278.04,
+        "accuracy": 0.2,
+        "mean_c_own": 0.47586460321842805,
+        "mean_generic_rel": 0.9148892570253618
+      },
+      {
+        "config": "q=1/32 k=3",
+        "mean_bytes": 3241.44,
+        "accuracy": 0.28,
+        "mean_c_own": 0.5920140260350297,
+        "mean_generic_rel": 0.9931926538431303
+      },
+      {
+        "config": "q=1/32 k=4",
+        "mean_bytes": 4327.12,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6894243136011865,
+        "mean_generic_rel": 1.0625618830010148
+      },
+      {
+        "config": "q=1/32 k=5",
+        "mean_bytes": 5513.8,
+        "accuracy": 0.56,
+        "mean_c_own": 0.7684623703463926,
+        "mean_generic_rel": 1.1023398059375775
+      },
+      {
+        "config": "q=1/32 k=6",
+        "mean_bytes": 6777.68,
+        "accuracy": 0.68,
+        "mean_c_own": 0.8269987007114021,
+        "mean_generic_rel": 1.1183690366221313
+      },
+      {
+        "config": "q=1/32 k=7",
+        "mean_bytes": 8087.12,
+        "accuracy": 0.92,
+        "mean_c_own": 0.8819174910579497,
+        "mean_generic_rel": 1.1195300518724616
+      },
+      {
+        "config": "q=1/32 k=8",
+        "mean_bytes": 9396.76,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9271113351010877,
+        "mean_generic_rel": 1.1007422460471372
+      },
+      {
+        "config": "q=1/32 k=9",
+        "mean_bytes": 10545.36,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9505559531317783,
+        "mean_generic_rel": 1.0729691096676988
+      },
+      {
+        "config": "q=1/32 k=10",
+        "mean_bytes": 12548.28,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9703523324277264,
+        "mean_generic_rel": 1.0068653659488682
+      },
+      {
+        "config": "q=1/64 k=0",
+        "mean_bytes": 1323.84,
+        "accuracy": 0.0,
+        "mean_c_own": 0.3124704956506188,
+        "mean_generic_rel": 0.4933773579119071
+      },
+      {
+        "config": "q=1/64 k=1",
+        "mean_bytes": 2462.2,
+        "accuracy": 0.16,
+        "mean_c_own": 0.39472298777928677,
+        "mean_generic_rel": 0.7434327896218733
+      },
+      {
+        "config": "q=1/64 k=2",
+        "mean_bytes": 3815.8,
+        "accuracy": 0.16,
+        "mean_c_own": 0.49056510119183727,
+        "mean_generic_rel": 0.9439089584317927
+      },
+      {
+        "config": "q=1/64 k=3",
+        "mean_bytes": 5421.0,
+        "accuracy": 0.2,
+        "mean_c_own": 0.6037935886920214,
+        "mean_generic_rel": 1.006873330226125
+      },
+      {
+        "config": "q=1/64 k=4",
+        "mean_bytes": 7251.28,
+        "accuracy": 0.32,
+        "mean_c_own": 0.7031546647867292,
+        "mean_generic_rel": 1.0680565667491506
+      },
+      {
+        "config": "q=1/64 k=5",
+        "mean_bytes": 9262.08,
+        "accuracy": 0.52,
+        "mean_c_own": 0.7850600332352282,
+        "mean_generic_rel": 1.1161851242950303
+      },
+      {
+        "config": "q=1/64 k=6",
+        "mean_bytes": 11435.92,
+        "accuracy": 0.68,
+        "mean_c_own": 0.8521061963751841,
+        "mean_generic_rel": 1.1374781140951884
+      },
+      {
+        "config": "q=1/64 k=7",
+        "mean_bytes": 13752.36,
+        "accuracy": 0.92,
+        "mean_c_own": 0.9112986220693319,
+        "mean_generic_rel": 1.1312173624025939
+      },
+      {
+        "config": "q=1/64 k=8",
+        "mean_bytes": 16170.72,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9572980614712548,
+        "mean_generic_rel": 1.1019544187885626
+      },
+      {
+        "config": "q=1/64 k=9",
+        "mean_bytes": 18432.0,
+        "accuracy": 1.0,
+        "mean_c_own": 0.981981541725941,
+        "mean_generic_rel": 1.067042980499667
+      },
+      {
+        "config": "q=1/64 k=10",
+        "mean_bytes": 21930.72,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9960612056093868,
+        "mean_generic_rel": 0.9939110580578792
+      },
+      {
+        "config": "q=1/128 k=0",
+        "mean_bytes": 2371.24,
+        "accuracy": 0.0,
+        "mean_c_own": 0.3175556270767172,
+        "mean_generic_rel": 0.5001194854078078
+      },
+      {
+        "config": "q=1/128 k=1",
+        "mean_bytes": 4295.0,
+        "accuracy": 0.16,
+        "mean_c_own": 0.39990813915667833,
+        "mean_generic_rel": 0.7512926629413371
+      },
+      {
+        "config": "q=1/128 k=2",
+        "mean_bytes": 6603.12,
+        "accuracy": 0.16,
+        "mean_c_own": 0.49444165187452266,
+        "mean_generic_rel": 0.9604882189132912
+      },
+      {
+        "config": "q=1/128 k=3",
+        "mean_bytes": 9309.24,
+        "accuracy": 0.24,
+        "mean_c_own": 0.6061444919683634,
+        "mean_generic_rel": 1.017742512335013
+      },
+      {
+        "config": "q=1/128 k=4",
+        "mean_bytes": 12433.8,
+        "accuracy": 0.32,
+        "mean_c_own": 0.7059391803165166,
+        "mean_generic_rel": 1.0793418602012244
+      },
+      {
+        "config": "q=1/128 k=5",
+        "mean_bytes": 15857.64,
+        "accuracy": 0.56,
+        "mean_c_own": 0.78904130255348,
+        "mean_generic_rel": 1.1289046173614663
+      },
+      {
+        "config": "q=1/128 k=6",
+        "mean_bytes": 19511.56,
+        "accuracy": 0.68,
+        "mean_c_own": 0.8555857412567731,
+        "mean_generic_rel": 1.14975851040664
+      },
+      {
+        "config": "q=1/128 k=7",
+        "mean_bytes": 23342.2,
+        "accuracy": 0.96,
+        "mean_c_own": 0.9145960305570265,
+        "mean_generic_rel": 1.1410890086747594
+      },
+      {
+        "config": "q=1/128 k=8",
+        "mean_bytes": 27337.52,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9604190560450556,
+        "mean_generic_rel": 1.1093457198043761
+      },
+      {
+        "config": "q=1/128 k=9",
+        "mean_bytes": 31136.24,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9853427315037065,
+        "mean_generic_rel": 1.0708291914779031
+      },
+      {
+        "config": "q=1/128 k=10",
+        "mean_bytes": 36493.92,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9992915297082888,
+        "mean_generic_rel": 0.9971880569743958
+      }
+    ],
+    "laplacian_pyramid": [
+      {
+        "config": "q=1/16 k=0",
+        "mean_bytes": 54.92,
+        "accuracy": 0.08,
+        "mean_c_own": 0.382528001046273,
+        "mean_generic_rel": 0.7197034330200418
+      },
+      {
+        "config": "q=1/16 k=1",
+        "mean_bytes": 167.04,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5658352048609168,
+        "mean_generic_rel": 0.9994750136786666
+      },
+      {
+        "config": "q=1/16 k=2",
+        "mean_bytes": 448.0,
+        "accuracy": 0.52,
+        "mean_c_own": 0.7575419912637672,
+        "mean_generic_rel": 1.1200900593699223
+      },
+      {
+        "config": "q=1/16 k=3",
+        "mean_bytes": 1208.76,
+        "accuracy": 0.92,
+        "mean_c_own": 0.8985723920813641,
+        "mean_generic_rel": 1.1692833988829474
+      },
+      {
+        "config": "q=1/16 k=4",
+        "mean_bytes": 3578.52,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9875990478897252,
+        "mean_generic_rel": 1.0266110035484204
+      },
+      {
+        "config": "q=1/32 k=0",
+        "mean_bytes": 66.04,
+        "accuracy": 0.08,
+        "mean_c_own": 0.36721255779804457,
+        "mean_generic_rel": 0.6918829594695083
+      },
+      {
+        "config": "q=1/32 k=1",
+        "mean_bytes": 215.44,
+        "accuracy": 0.16,
+        "mean_c_own": 0.561827442411952,
+        "mean_generic_rel": 1.0002216551705871
+      },
+      {
+        "config": "q=1/32 k=2",
+        "mean_bytes": 626.44,
+        "accuracy": 0.52,
+        "mean_c_own": 0.7648261725188845,
+        "mean_generic_rel": 1.1192858255933589
+      },
+      {
+        "config": "q=1/32 k=3",
+        "mean_bytes": 1803.64,
+        "accuracy": 0.92,
+        "mean_c_own": 0.9075226620686796,
+        "mean_generic_rel": 1.1397103723765916
+      },
+      {
+        "config": "q=1/32 k=4",
+        "mean_bytes": 5725.04,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9975191271056381,
+        "mean_generic_rel": 0.9967306182942578
+      },
+      {
+        "config": "q=1/64 k=0",
+        "mean_bytes": 76.24,
+        "accuracy": 0.12,
+        "mean_c_own": 0.370205566363297,
+        "mean_generic_rel": 0.7094159093422454
+      },
+      {
+        "config": "q=1/64 k=1",
+        "mean_bytes": 268.88,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5665920492886464,
+        "mean_generic_rel": 1.0051374468031822
+      },
+      {
+        "config": "q=1/64 k=2",
+        "mean_bytes": 829.48,
+        "accuracy": 0.48,
+        "mean_c_own": 0.765806486910801,
+        "mean_generic_rel": 1.1162247487536578
+      },
+      {
+        "config": "q=1/64 k=3",
+        "mean_bytes": 2541.72,
+        "accuracy": 0.96,
+        "mean_c_own": 0.9078785869400164,
+        "mean_generic_rel": 1.1395846969966015
+      },
+      {
+        "config": "q=1/64 k=4",
+        "mean_bytes": 8424.52,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9994169052239316,
+        "mean_generic_rel": 0.9992762981228313
+      },
+      {
+        "config": "q=1/128 k=0",
+        "mean_bytes": 86.92,
+        "accuracy": 0.08,
+        "mean_c_own": 0.37200095057152965,
+        "mean_generic_rel": 0.7029798671055245
+      },
+      {
+        "config": "q=1/128 k=1",
+        "mean_bytes": 326.6,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5667266208863294,
+        "mean_generic_rel": 0.9966726320877344
+      },
+      {
+        "config": "q=1/128 k=2",
+        "mean_bytes": 1054.08,
+        "accuracy": 0.48,
+        "mean_c_own": 0.7669327035471902,
+        "mean_generic_rel": 1.1167376078475488
+      },
+      {
+        "config": "q=1/128 k=3",
+        "mean_bytes": 3375.96,
+        "accuracy": 0.92,
+        "mean_c_own": 0.9088518549145084,
+        "mean_generic_rel": 1.1415773135017533
+      },
+      {
+        "config": "q=1/128 k=4",
+        "mean_bytes": 11513.12,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9998589750121067,
+        "mean_generic_rel": 0.9991280020249697
+      }
+    ],
+    "jpeg": [
+      {
+        "config": "quality=2",
+        "mean_bytes": 345.28,
+        "accuracy": 0.6,
+        "mean_c_own": 0.6683063547089968,
+        "mean_generic_rel": 0.7598627126422214
+      },
+      {
+        "config": "quality=5",
+        "mean_bytes": 397.52,
+        "accuracy": 0.96,
+        "mean_c_own": 0.8199173541844601,
+        "mean_generic_rel": 0.9741643868637938
+      },
+      {
+        "config": "quality=10",
+        "mean_bytes": 491.0,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9165983211531394,
+        "mean_generic_rel": 0.9881473402284158
+      },
+      {
+        "config": "quality=15",
+        "mean_bytes": 568.76,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9480941850727668,
+        "mean_generic_rel": 1.003574864692005
+      },
+      {
+        "config": "quality=20",
+        "mean_bytes": 633.08,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9613347666747465,
+        "mean_generic_rel": 1.0090094628032997
+      },
+      {
+        "config": "quality=30",
+        "mean_bytes": 747.72,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9744689351422636,
+        "mean_generic_rel": 1.0001138603818327
+      },
+      {
+        "config": "quality=40",
+        "mean_bytes": 839.96,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9810823469122325,
+        "mean_generic_rel": 1.011926923988804
+      },
+      {
+        "config": "quality=50",
+        "mean_bytes": 923.72,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9851336572021958,
+        "mean_generic_rel": 1.011957883558794
+      },
+      {
+        "config": "quality=60",
+        "mean_bytes": 1014.6,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9878623313220887,
+        "mean_generic_rel": 1.0079150962011796
+      },
+      {
+        "config": "quality=75",
+        "mean_bytes": 1231.2,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9924588080846573,
+        "mean_generic_rel": 0.9972955447328609
+      },
+      {
+        "config": "quality=90",
+        "mean_bytes": 1824.48,
+        "accuracy": 1.0,
+        "mean_c_own": 0.9976862835229465,
+        "mean_generic_rel": 1.0002878090267568
+      }
+    ]
+  },
+  "envelopes": {
+    "sihti_natural": [
+      [
+        824.84,
+        0.2
+      ],
+      [
+        1284.36,
+        0.2
+      ],
+      [
+        1313.2,
+        0.24
+      ],
+      [
+        1781.56,
+        0.32
+      ],
+      [
+        2011.48,
+        0.32
+      ],
+      [
+        2085.64,
+        0.32
+      ],
+      [
+        2209.6,
+        0.48
+      ],
+      [
+        2600.2,
+        0.6
+      ],
+      [
+        2944.24,
+        0.68
+      ],
+      [
+        2957.24,
+        0.68
+      ],
+      [
+        3232.76,
+        0.68
+      ],
+      [
+        3237.56,
+        0.84
+      ],
+      [
+        3298.8,
+        0.84
+      ],
+      [
+        3458.48,
+        0.92
+      ],
+      [
+        3589.68,
+        0.92
+      ],
+      [
+        3668.28,
+        0.92
+      ],
+      [
+        3906.64,
+        0.92
+      ],
+      [
+        3921.4,
+        0.96
+      ],
+      [
+        4692.24,
+        0.96
+      ],
+      [
+        4899.08,
+        0.96
+      ],
+      [
+        5293.0,
+        0.96
+      ],
+      [
+        5906.48,
+        1.0
+      ],
+      [
+        6243.48,
+        1.0
+      ],
+      [
+        6854.56,
+        1.0
+      ],
+      [
+        7536.6,
+        1.0
+      ],
+      [
+        7698.72,
+        1.0
+      ],
+      [
+        7913.56,
+        1.0
+      ],
+      [
+        8406.4,
+        1.0
+      ],
+      [
+        8860.88,
+        1.0
+      ],
+      [
+        9692.16,
+        1.0
+      ],
+      [
+        10032.16,
+        1.0
+      ],
+      [
+        10043.56,
+        1.0
+      ],
+      [
+        11538.6,
+        1.0
+      ],
+      [
+        12799.68,
+        1.0
+      ],
+      [
+        13390.76,
+        1.0
+      ],
+      [
+        15159.6,
+        1.0
+      ],
+      [
+        15739.24,
+        1.0
+      ],
+      [
+        16634.72,
+        1.0
+      ],
+      [
+        18810.72,
+        1.0
+      ],
+      [
+        19188.56,
+        1.0
+      ],
+      [
+        21975.44,
+        1.0
+      ],
+      [
+        25172.36,
+        1.0
+      ],
+      [
+        28080.96,
+        1.0
+      ],
+      [
+        32335.12,
+        1.0
+      ]
+    ],
+    "sihti_learned": [
+      [
+        824.84,
+        0.2
+      ],
+      [
+        1168.88,
+        0.48
+      ],
+      [
+        1284.36,
+        0.48
+      ],
+      [
+        1596.92,
+        0.56
+      ],
+      [
+        1728.12,
+        0.6
+      ],
+      [
+        1949.04,
+        0.76
+      ],
+      [
+        2011.48,
+        0.76
+      ],
+      [
+        2291.76,
+        0.84
+      ],
+      [
+        2417.4,
+        0.88
+      ],
+      [
+        2496.0,
+        0.92
+      ],
+      [
+        2886.6,
+        0.92
+      ],
+      [
+        3139.72,
+        0.96
+      ],
+      [
+        3232.76,
+        0.96
+      ],
+      [
+        3241.16,
+        0.96
+      ],
+      [
+        3628.08,
+        0.96
+      ],
+      [
+        3790.08,
+        0.96
+      ],
+      [
+        3921.4,
+        0.96
+      ],
+      [
+        3948.84,
+        1.0
+      ],
+      [
+        4793.0,
+        1.0
+      ],
+      [
+        5341.32,
+        1.0
+      ],
+      [
+        5664.6,
+        1.0
+      ],
+      [
+        6119.08,
+        1.0
+      ],
+      [
+        6172.32,
+        1.0
+      ],
+      [
+        7110.16,
+        1.0
+      ],
+      [
+        7111.52,
+        1.0
+      ],
+      [
+        8282.8,
+        1.0
+      ],
+      [
+        8679.28,
+        1.0
+      ],
+      [
+        8962.32,
+        1.0
+      ],
+      [
+        9084.08,
+        1.0
+      ],
+      [
+        10032.16,
+        1.0
+      ],
+      [
+        10355.76,
+        1.0
+      ],
+      [
+        11830.88,
+        1.0
+      ],
+      [
+        11876.2,
+        1.0
+      ],
+      [
+        13500.96,
+        1.0
+      ],
+      [
+        15040.92,
+        1.0
+      ],
+      [
+        16054.8,
+        1.0
+      ],
+      [
+        17284.52,
+        1.0
+      ],
+      [
+        17342.12,
+        1.0
+      ],
+      [
+        19188.56,
+        1.0
+      ],
+      [
+        20193.12,
+        1.0
+      ],
+      [
+        22949.24,
+        1.0
+      ],
+      [
+        27203.4,
+        1.0
+      ],
+      [
+        29263.64,
+        1.0
+      ],
+      [
+        32335.12,
+        1.0
+      ]
+    ],
+    "sihti_lattice": [
+      [
+        482.68,
+        0.04
+      ],
+      [
+        786.32,
+        0.04
+      ],
+      [
+        886.44,
+        0.12
+      ],
+      [
+        1323.84,
+        0.12
+      ],
+      [
+        1363.68,
+        0.12
+      ],
+      [
+        1455.64,
+        0.12
+      ],
+      [
+        1929.72,
+        0.16
+      ],
+      [
+        2278.04,
+        0.2
+      ],
+      [
+        2371.24,
+        0.2
+      ],
+      [
+        2462.2,
+        0.2
+      ],
+      [
+        2506.04,
+        0.28
+      ],
+      [
+        3082.8,
+        0.44
+      ],
+      [
+        3241.44,
+        0.44
+      ],
+      [
+        3650.8,
+        0.48
+      ],
+      [
+        3815.8,
+        0.48
+      ],
+      [
+        4168.48,
+        0.48
+      ],
+      [
+        4295.0,
+        0.48
+      ],
+      [
+        4327.12,
+        0.48
+      ],
+      [
+        4675.24,
+        0.76
+      ],
+      [
+        5089.56,
+        0.84
+      ],
+      [
+        5421.0,
+        0.84
+      ],
+      [
+        5513.8,
+        0.84
+      ],
+      [
+        6045.6,
+        0.92
+      ],
+      [
+        6603.12,
+        0.92
+      ],
+      [
+        6777.68,
+        0.92
+      ],
+      [
+        7251.28,
+        0.92
+      ],
+      [
+        8087.12,
+        0.92
+      ],
+      [
+        9262.08,
+        0.92
+      ],
+      [
+        9309.24,
+        0.92
+      ],
+      [
+        9396.76,
+        1.0
+      ],
+      [
+        10545.36,
+        1.0
+      ],
+      [
+        11435.92,
+        1.0
+      ],
+      [
+        12433.8,
+        1.0
+      ],
+      [
+        12548.28,
+        1.0
+      ],
+      [
+        13752.36,
+        1.0
+      ],
+      [
+        15857.64,
+        1.0
+      ],
+      [
+        16170.72,
+        1.0
+      ],
+      [
+        18432.0,
+        1.0
+      ],
+      [
+        19511.56,
+        1.0
+      ],
+      [
+        21930.72,
+        1.0
+      ],
+      [
+        23342.2,
+        1.0
+      ],
+      [
+        27337.52,
+        1.0
+      ],
+      [
+        31136.24,
+        1.0
+      ],
+      [
+        36493.92,
+        1.0
+      ]
+    ],
+    "laplacian_pyramid": [
+      [
+        54.92,
+        0.08
+      ],
+      [
+        66.04,
+        0.08
+      ],
+      [
+        76.24,
+        0.12
+      ],
+      [
+        86.92,
+        0.12
+      ],
+      [
+        167.04,
+        0.2
+      ],
+      [
+        215.44,
+        0.2
+      ],
+      [
+        268.88,
+        0.2
+      ],
+      [
+        326.6,
+        0.2
+      ],
+      [
+        448.0,
+        0.52
+      ],
+      [
+        626.44,
+        0.52
+      ],
+      [
+        829.48,
+        0.52
+      ],
+      [
+        1054.08,
+        0.52
+      ],
+      [
+        1208.76,
+        0.92
+      ],
+      [
+        1803.64,
+        0.92
+      ],
+      [
+        2541.72,
+        0.96
+      ],
+      [
+        3375.96,
+        0.96
+      ],
+      [
+        3578.52,
+        1.0
+      ],
+      [
+        5725.04,
+        1.0
+      ],
+      [
+        8424.52,
+        1.0
+      ],
+      [
+        11513.12,
+        1.0
+      ]
+    ],
+    "jpeg": [
+      [
+        345.28,
+        0.6
+      ],
+      [
+        397.52,
+        0.96
+      ],
+      [
+        491.0,
+        1.0
+      ],
+      [
+        568.76,
+        1.0
+      ],
+      [
+        633.08,
+        1.0
+      ],
+      [
+        747.72,
+        1.0
+      ],
+      [
+        839.96,
+        1.0
+      ],
+      [
+        923.72,
+        1.0
+      ],
+      [
+        1014.6,
+        1.0
+      ],
+      [
+        1231.2,
+        1.0
+      ],
+      [
+        1824.48,
+        1.0
+      ]
+    ]
+  },
+  "B92_mean_bytes_per_face": {
+    "sihti_natural": 3458.48,
+    "sihti_learned": 2496.0,
+    "sihti_lattice": 6045.6,
+    "laplacian_pyramid": 1208.76,
+    "jpeg": 397.52
+  },
+  "verdicts": {
+    "V1_learning_helps": {
+      "ratio_learned_over_natural": 0.7217043325391501,
+      "pass": true
+    },
+    "V2_sihti_vs_classical": {
+      "ratio_sihti_over_best_classical": 6.2789293620446776,
+      "reading": "lose"
+    },
+    "V3_imagining_without_remembering": [
+      {
+        "method": "sihti_natural",
+        "config": "q=1/16 k=1",
+        "mean_bytes": 1313.2,
+        "accuracy": 0.24,
+        "mean_c_own": 0.5060849916177836,
+        "mean_generic_rel": 0.9191781024355429
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/16 k=2",
+        "mean_bytes": 1781.56,
+        "accuracy": 0.32,
+        "mean_c_own": 0.5852741293543596,
+        "mean_generic_rel": 0.9802211212953806
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/16 k=3",
+        "mean_bytes": 2209.6,
+        "accuracy": 0.48,
+        "mean_c_own": 0.6329204399761267,
+        "mean_generic_rel": 0.9650636775532669
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/32 k=2",
+        "mean_bytes": 2957.24,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6183034495447719,
+        "mean_generic_rel": 0.908011086554054
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/32 k=3",
+        "mean_bytes": 3906.64,
+        "accuracy": 0.4,
+        "mean_c_own": 0.7159081975735806,
+        "mean_generic_rel": 1.0032774133338012
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/64 k=1",
+        "mean_bytes": 3298.8,
+        "accuracy": 0.24,
+        "mean_c_own": 0.5611625648481414,
+        "mean_generic_rel": 0.9351444557575614
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/64 k=2",
+        "mean_bytes": 4692.24,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6389785827300014,
+        "mean_generic_rel": 0.9671522184689372
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/64 k=3",
+        "mean_bytes": 6243.48,
+        "accuracy": 0.4,
+        "mean_c_own": 0.7321038619696855,
+        "mean_generic_rel": 1.023527565477759
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/128 k=1",
+        "mean_bytes": 5293.0,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5633744488570539,
+        "mean_generic_rel": 0.9484004761898376
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/128 k=2",
+        "mean_bytes": 7536.6,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6395908488024868,
+        "mean_generic_rel": 0.9715806717801244
+      },
+      {
+        "method": "sihti_natural",
+        "config": "q=1/128 k=3",
+        "mean_bytes": 10043.56,
+        "accuracy": 0.44,
+        "mean_c_own": 0.7311316352882983,
+        "mean_generic_rel": 1.0274326734068382
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/32 k=2",
+        "mean_bytes": 2278.04,
+        "accuracy": 0.2,
+        "mean_c_own": 0.47586460321842805,
+        "mean_generic_rel": 0.9148892570253618
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/32 k=3",
+        "mean_bytes": 3241.44,
+        "accuracy": 0.28,
+        "mean_c_own": 0.5920140260350297,
+        "mean_generic_rel": 0.9931926538431303
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/32 k=4",
+        "mean_bytes": 4327.12,
+        "accuracy": 0.32,
+        "mean_c_own": 0.6894243136011865,
+        "mean_generic_rel": 1.0625618830010148
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/64 k=2",
+        "mean_bytes": 3815.8,
+        "accuracy": 0.16,
+        "mean_c_own": 0.49056510119183727,
+        "mean_generic_rel": 0.9439089584317927
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/64 k=3",
+        "mean_bytes": 5421.0,
+        "accuracy": 0.2,
+        "mean_c_own": 0.6037935886920214,
+        "mean_generic_rel": 1.006873330226125
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/64 k=4",
+        "mean_bytes": 7251.28,
+        "accuracy": 0.32,
+        "mean_c_own": 0.7031546647867292,
+        "mean_generic_rel": 1.0680565667491506
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/128 k=2",
+        "mean_bytes": 6603.12,
+        "accuracy": 0.16,
+        "mean_c_own": 0.49444165187452266,
+        "mean_generic_rel": 0.9604882189132912
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/128 k=3",
+        "mean_bytes": 9309.24,
+        "accuracy": 0.24,
+        "mean_c_own": 0.6061444919683634,
+        "mean_generic_rel": 1.017742512335013
+      },
+      {
+        "method": "sihti_lattice",
+        "config": "q=1/128 k=4",
+        "mean_bytes": 12433.8,
+        "accuracy": 0.32,
+        "mean_c_own": 0.7059391803165166,
+        "mean_generic_rel": 1.0793418602012244
+      },
+      {
+        "method": "laplacian_pyramid",
+        "config": "q=1/16 k=1",
+        "mean_bytes": 167.04,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5658352048609168,
+        "mean_generic_rel": 0.9994750136786666
+      },
+      {
+        "method": "laplacian_pyramid",
+        "config": "q=1/32 k=1",
+        "mean_bytes": 215.44,
+        "accuracy": 0.16,
+        "mean_c_own": 0.561827442411952,
+        "mean_generic_rel": 1.0002216551705871
+      },
+      {
+        "method": "laplacian_pyramid",
+        "config": "q=1/64 k=1",
+        "mean_bytes": 268.88,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5665920492886464,
+        "mean_generic_rel": 1.0051374468031822
+      },
+      {
+        "method": "laplacian_pyramid",
+        "config": "q=1/64 k=2",
+        "mean_bytes": 829.48,
+        "accuracy": 0.48,
+        "mean_c_own": 0.765806486910801,
+        "mean_generic_rel": 1.1162247487536578
+      },
+      {
+        "method": "laplacian_pyramid",
+        "config": "q=1/128 k=1",
+        "mean_bytes": 326.6,
+        "accuracy": 0.2,
+        "mean_c_own": 0.5667266208863294,
+        "mean_generic_rel": 0.9966726320877344
+      },
+      {
+        "method": "laplacian_pyramid",
+        "config": "q=1/128 k=2",
+        "mean_bytes": 1054.08,
+        "accuracy": 0.48,
+        "mean_c_own": 0.7669327035471902,
+        "mean_generic_rel": 1.1167376078475488
+      }
+    ]
+  }
+}
