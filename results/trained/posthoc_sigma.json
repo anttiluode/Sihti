@@ -1,0 +1,75 @@
+{
+  "posthoc": true,
+  "chosen_sigma_on_train": 2.0,
+  "train_grid": {
+    "8.0": {
+      "train_eye_c_own": 0.8172381393598522,
+      "unreached": 0
+    },
+    "4.0": {
+      "train_eye_c_own": 0.9002092907738563,
+      "unreached": 0
+    },
+    "2.0": {
+      "train_eye_c_own": 0.9437972511515176,
+      "unreached": 0
+    },
+    "1.4": {
+      "train_eye_c_own": 0.9532280065892613,
+      "unreached": 1
+    },
+    "1.0": {
+      "train_eye_c_own": 0.9484291307381221,
+      "unreached": 4
+    },
+    "0.7": {
+      "train_eye_c_own": 0.9298999993963624,
+      "unreached": 15
+    },
+    "0.5": {
+      "train_eye_c_own": 0.8909163822912269,
+      "unreached": 18
+    }
+  },
+  "test": {
+    "16": {
+      "unreached": 0,
+      "steps_mean": 26.12,
+      "eye": {
+        "correct": 25,
+        "mean_c_own": 0.9762870979428768
+      },
+      "mouth": {
+        "correct": 25,
+        "mean_c_own": 0.9566060889373198
+      },
+      "raw_eye_rmse_mean": 0.021505389619427624
+    },
+    "32": {
+      "unreached": 0,
+      "steps_mean": 56.6,
+      "eye": {
+        "correct": 25,
+        "mean_c_own": 0.9569747279113404
+      },
+      "mouth": {
+        "correct": 25,
+        "mean_c_own": 0.9238613799470725
+      },
+      "raw_eye_rmse_mean": 0.0291917861260901
+    },
+    "64": {
+      "unreached": 0,
+      "steps_mean": 114.32,
+      "eye": {
+        "correct": 25,
+        "mean_c_own": 0.9249655113541018
+      },
+      "mouth": {
+        "correct": 25,
+        "mean_c_own": 0.8732874858383917
+      },
+      "raw_eye_rmse_mean": 0.038126876837213566
+    }
+  }
+}

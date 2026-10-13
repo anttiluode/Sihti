@@ -216,6 +216,34 @@ So the codec question is closed. Storing Sihti's residues is not an efficient wa
 
 Limits: 43 small faces (37–109 px boxes, upsampled to 64 px), one purifier setting, 25-way identity within one test set. This is a pilot.
 
+## Can the purifier be *trained* to keep the eyes?
+
+This section follows Sol's proposal: train the purifier's coupling rules, not just the order in which residues are restored. The learnable purifier has the same graph as the own EQ, with 12 parameters:
+
+- weights on six local features (L, a, b, gradient, local contrast, centre–surround);
+- a per-pixel "resistance" gate computed from those same features, with **no position input**.
+
+Training starts from the default own EQ, on the 18 train faces, and is scored on the 25 held-out faces. The teacher is the eye-identity reader: a hand-defined correlation, not a neural network, because no deep-learning runtime was available. Both runs were pre-registered before scoring: [v1](TRAINED_PREREG.md), [v2](TRAINED_PREREG_V2.md).
+
+**v1 (budget: equal removed energy). The pass was a loophole.** Eye identity at depth 32 went from 15/25 to 25/25. But the optimiser had learned to pull every pixel toward its brightest neighbours. That spends the energy quota in about 2 steps as a brightness shift, which the correlation readers cannot see. The pre-registered compressibility check exposed it: the "purified" images were 76% *larger* to store. A bug in the energy matching (linear interpolation of a quadratic) was found and fixed before reporting; the loophole survived the fix.
+
+**v2 (budget: equal storage, zlib bytes; plus a raw-brightness reader).** The eye-trained purifier "passed" again, but it **never reached the byte budget on 20 of 25 test faces**. It had learned couplings stiff enough that the 512-step cap was what stopped it, so it is not credited. The mouth-trained control met the budget on every face, and it is the honest result.
+
+![equal storage](figures/trained.png)
+
+| at depth 32, equal storage, 25 test faces | eye identity | mouth identity | raw eye error |
+|---|---:|---:|---:|
+| fixed own EQ (σ 8, the default) | 15 | 15 | 0.056 |
+| one knob: σ 2, chosen on train *(post-hoc)* | **25** | **25** | 0.029 |
+| trained on mouth (12 parameters) | **25** | **25** | **0.021** |
+| trained on eyes (budget not met on 20/25) | *(25)* | *(25)* | *(0.021)* |
+
+**What was actually learned:** mostly one thing, a much steeper luminance-similarity weight. Sihti's own EQ becomes strongly edge-preserving: it flattens regions of similar brightness into a cartoon and keeps every edge, including eyes, brows, glasses and mouth. That is the classical bilateral / Perona–Malik idea. Retuning only σ from 8 to 2 recovers most of the gain: 25/25 at depth 32 and at depth 64. So the practical finding is that **Sihti's default σ = 8 is too blunt for faces**.
+
+**What was not found:** feature-specific learning. The eye-trained and mouth-trained purifiers improve eyes and mouths by the same amount (mean gaps 0.000 and −0.004, pre-registered threshold 0.02), in both v1 and v2. Nothing here learned to protect *eyes* in particular; it learned to protect *edges*.
+
+Lessons kept: a budget in L2 energy can be gamed with brightness; a step cap can be gamed with stiffness; storage cost plus a raw-fidelity reader closed both holes. [Numbers](results/trained/) · [code](trained_purifier.py), [v2](trained_purifier_v2.py), [σ diagnostic](posthoc_sigma.py).
+
 ## Next: v1, common fate (not built)
 
 Add a slow state that pulls together colours that moved together, and let it write the operator. The demo: stand still and the loop splits you into face, shirt and trousers. Walk across the room, and the co-motion writes the EQ. Stand still again and you are one object.
@@ -244,6 +272,9 @@ bench_bsds.py     G3-G4 on BSDS500 -> results/BSDS_VAL.json, results/BSDS_TEST.j
 make_figures.py   figures/
 eye_persistence.py  eye lifetimes + bytes-matched recovery -> results/eye/ (EYE_PREREG.md)
 make_eye_figure.py  figures/eyes.png
+trained_purifier.py, trained_purifier_v2.py  learnable coupling rules (TRAINED_PREREG*.md) -> results/trained/
+posthoc_sigma.py    one-knob control for the trained purifier
+make_trained_figure.py  figures/trained.png
 tests/            pytest
 ```
 
